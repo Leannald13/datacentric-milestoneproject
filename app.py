@@ -5,8 +5,8 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = 'dataCentricCluster'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@datacentriccluster-snqmw.mongodb.net/dataCentricCluster?retryWrites=true&w=majority'
+app.config["MONGO_DBNAME"] = 'boxsetReviews'
+app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@datacentriccluster-snqmw.mongodb.net/boxsetReviews?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
     
@@ -17,6 +17,6 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP'),
-        port=int(os.environ.get('PORT')),
+    app.run(host='0.0.0.0',
+        port=5000,
         debug=True)
