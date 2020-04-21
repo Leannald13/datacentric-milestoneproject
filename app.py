@@ -15,6 +15,19 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html", review=mongo.db.review.find())
 
+@app.route('/add_new') 
+def add_new():
+    return render_template("typeofshow.html", genre=mongo.db.genre.find())
+
+
+@app.route('/add_boxset') 
+def add_boxset():
+    return render_template("addseries.html", addboxset=mongo.db.addboxset.find())
+
+@app.route('/add_user') 
+def add_user():
+    return render_template("userinfo.html", user=mongo.db.user.find())
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',

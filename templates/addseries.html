@@ -1,0 +1,13 @@
+{% extends 'base.html' %}   
+{% block content %}
+
+    {% for stuff in addboxset %} 
+    {{stuff.boxset_image}}
+    {{stuff.boxset_title}}
+    {{stuff.boxset_seasons}}
+    {{stuff.boxset_starring}}
+    {{stuff.boxset_rating}}
+    {{stuff.boxset_summary}}
+    {%endfor%}
+    
+{% endblock %}

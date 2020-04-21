@@ -1,17 +1,10 @@
-
-
 {% extends 'base.html'%}   
 {% block content %}
 
-    {% for information in review %}
-    {{information.review_image}}
-    {{information.review_title}}
-    {{information.review_seasons}}
-    {{information.review_release}}
-    {{information.review_starring}}
-    {{information.review_rating}}
-    {{information.review_summary}}
+    {% for information in review %} 
+    {{information.user_rating}}
+    {{information.user_comments}}
     {%endfor%}
-
+    
 {% endblock %}
 
