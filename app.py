@@ -28,6 +28,10 @@ def add_boxset():
 def add_user():
     return render_template("userinfo.html", user=mongo.db.user.find())
 
+@app.route('/home_page') 
+def home_page():
+    return render_template("home.html", homepage=mongo.db.homepage.find())
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',

@@ -1,0 +1,13 @@
+{% extends 'base.html'%}   
+{% block content %}
+
+    {% for cards in homepage %} 
+    {{cards.boxset_image}}
+    {{cards.boxset_title}}
+    {{cards.boxset_seasons}}
+    {{cards.boxset_starring}}
+    {{cards.boxset_rating}}
+    {{cards.boxset_summary}}
+    {%endfor%}
+    
+{% endblock %}
