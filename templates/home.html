@@ -1,29 +1,83 @@
 {% extends 'base.html'%}   
 {% block content %}
 
-    {% for cards in homepage %} 
-    
-  <div class="row">
-    <div class="col md4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <span>{{cards.boxset_image}}</span>
-          <div>
-        <span>{{cards.boxset_title}}</span
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+<div class="row"> 
+<div class="col-sm-4">
+    <div class="br"></div>
+    <div class="packagecard text-center">
+        <div class="packagecard-header">
+            <h5>Our All Time Favs!</h5>
         </div>
-        <span> {{cards.boxset_seasons}}</span>
-        <span> {{cards.boxset_starring}}</span>
-        <span> {{cards.boxset_rating}}</span>
-        
-        <div class="card-content">
-          <p>{{cards.boxset_summary}}</p>
+        <div class="packagecard-body">
+            <div class="br"></div>
+            <ul>
+            <li><span class="material-icons">live_tv</span>Westworld 9.2</li>
+            <li><span class="material-icons">live_tv</span>Game of Thrones 9.0</li>
+            <li><span class="material-icons">live_tv</span>Friends 8.9</li>
+            <li><span class="material-icons">live_tv</span>Breaking Bad 8.5</li>
+            <li><span class="material-icons">live_tv</span>The West Wing</li>
+            <li><span class="material-icons">live_tv</span>The Sopranos 8.5</li>
+            <li><span class="material-icons">live_tv</span>The Walking Dead 8.2</li>
+            <li><span class="material-icons">live_tv</span>This Is Us 8.2</li>
+            <li><span class="material-icons">live_tv</span>Parks and Recreation 8.0</li>
+            <li><span class="material-icons">live_tv</span>Arrested Development 7.9</li>
+            </ul>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  </div>
-  </div>
+    
+    <div class="col-sm-4">
+        <div class="br"></div>
+        <div class="packagecard2 text-center">
+            <div class="packagecard-header2">
+                <h5>Your Top Picks!</h5>
+            </div>
+            <div class="packagecard-body">
+                <div class="br"></div>
+                <ul>
+                <li> <span class="material-icons">live_tv</span>Game of Thrones 9.5</li>
+                <li><span class="material-icons">live_tv</span>Breaking Bad 9.2</li>
+                <li><span class="material-icons">live_tv</span>The Walking Dead 9.1</li>
+                <li><span class="material-icons">live_tv</span>Westworld 8.9</li>
+                <li><span class="material-icons">live_tv</span>Stranger Things 8.8</li>
+                <li><span class="material-icons">live_tv</span>Killing Eve 8.7</li>
+                <li><span class="material-icons">live_tv</span>Ozark 8.3</li>
+                <li><span class="material-icons">live_tv</span>This Is Us 8.5</li>
+                <li><span class="material-icons">live_tv</span>Big Little Lies 8.4</li>
+                <li><span class="material-icons">live_tv</span>Unbelievable 8.1</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% for cards in homepage %} 
+
+    <div class="row">
+        <div class="col-md-6 col-lg-4">
+        <div class="card">
+            <div class="card-image">
+            <img src="images/sample-1.jpg">
+            <span>{{cards.boxset_image}}</span>
+            <div class="card-title">
+            <span>{{cards.boxset_title}}</span>
+            </div>
+            <div class="card-seasons">
+            <span> {{cards.boxset_seasons}}</span>
+            </div>
+            <div class="card-starring">
+            <span> {{cards.boxset_starring}}</span>
+            </div>
+            <div class="card-rating">
+            <span> {{cards.boxset_rating}}</span>
+            </div>
+            <div class="card-readmore">
+            <button type="button" class="btn btn-primary">Read More</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
  {%endfor%}
 {% endblock %}
