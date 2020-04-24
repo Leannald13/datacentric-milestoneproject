@@ -1,15 +1,19 @@
 {% extends 'base.html'%}   
 {% block content %}
 
+<div class="box1">
+<img src="static/images/main.jpg" alt="westworld" class="westworld">
+</div>
 
-<div class="row"> 
+<!--
+<div class="box2 row"> 
 <div class="col-sm-4">
     <div class="br"></div>
-    <div class="packagecard text-center">
-        <div class="packagecard-header">
+    <div class="list text-center">
+        <div class="list-header">
             <h5>Our All Time Favs!</h5>
         </div>
-        <div class="packagecard-body">
+        <div class="list-body">
             <div class="br"></div>
             <ul>
             <li><span class="material-icons">live_tv</span>Westworld 9.2</li>
@@ -29,11 +33,11 @@
     
     <div class="col-sm-4">
         <div class="br"></div>
-        <div class="packagecard2 text-center">
-            <div class="packagecard-header2">
+        <div class="list text-center">
+            <div class="list-header">
                 <h5>Your Top Picks!</h5>
             </div>
-            <div class="packagecard-body">
+            <div class="list-body">
                 <div class="br"></div>
                 <ul>
                 <li> <span class="material-icons">live_tv</span>Game of Thrones 9.5</li>
@@ -50,6 +54,7 @@
             </div>
         </div>
     </div>
+    
 
     {% for cards in homepage %} 
 
@@ -79,5 +84,6 @@
     </div>
     </div>
     </div>
+    -->
  {%endfor%}
 {% endblock %}

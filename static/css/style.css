@@ -1,9 +1,13 @@
-.box1 {
+
+.box2 {
     width: 100%;
     height: 500px;
     background-color: green;
 }
 
-.rating-list {
-    display: inline-block;
+.westworld {
+    height: 150px;
+    width: 60%;
+    margin-left: 300px;
+    margin-top: 30px;
 }
