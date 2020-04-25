@@ -1,13 +1,75 @@
 
+.main-heading {
+    background-color: #FFDC40;
+
+}
+
+.main-title {
+    color: black;
+}
+
+.main-subtitle {
+    color: black;
+}
+
+.box1 {
+    background-color: black;
+    width: 100%;
+    height: 220px;
+}
+
 .box2 {
     width: 100%;
-    height: 500px;
-    background-color: green;
+    height: 400px;
+    background-color: gray;
+    margin-top: 70px;
+    border-width: 7px;
+    border-color: black;
 }
 
 .westworld {
     height: 150px;
     width: 60%;
-    margin-left: 300px;
+    margin-left: 280px;
     margin-top: 30px;
+}
+
+.largebox {
+        box-sizing: border-box;
+        width: 100%;
+        height: 400px;
+        background-color: #f7ffd8;
+        margin-top: 50px;
+        padding-bottom: 100px;
+    }
+
+.box3 {
+    display: inline-block;
+    width: 50%;
+    height: 350px;
+    border-width: 3px;
+    border-color: #10aea6;
+    border-style: solid;
+    box-shadow: 10px 12px 12px #10aea6;
+    margin-right: 250px;
+    margin-left: 60px;
+    margin-top: 50px;
+    padding-left: 50px;
+}
+
+.box4 {
+    display: inline-block;
+    width: 50%;
+    height: 350px;
+    border-width: 3px;
+    border-color: #10aea6;
+    border-style: solid;
+    box-shadow: 10px 12px 12px #10aea6;
+    padding-left: 50px;
+       
+}
+
+.test {
+    height: 500px;
+    width: 100%;
 }
