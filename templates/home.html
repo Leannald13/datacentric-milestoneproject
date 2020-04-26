@@ -56,25 +56,21 @@
 
     
     {% for cards in homepage %} 
-    <div class="largebox2">
-    <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/sample-1.jpg"> 
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <span class="card2">{{cards.boxset_image}}</span>
-            <span class="card2">{{cards.boxset_title}}</span>
-            <span class="card2"> {{cards.boxset_seasons}}</span>
-            <span class="card2"> {{cards.boxset_starring}}</span>
-            <span class="card2"> {{cards.boxset_rating}}</span>
-        </div>
-        </div>
+    
+    
+     <div class="row largebox2">
+      <div class="col s2 minibox">  
+      <span class="thetext">{{cards.boxset_image}}</span><br>
+      <span class="thetext">{{cards.boxset_title}}</span><br>
+     <span class="thetext"> {{cards.boxset_seasons}}</span><br>
+     <span class="thetext"> {{cards.boxset_starring}}</span><br>
+     <span class="thetext"> {{cards.boxset_rating}}</span><br>
+     
+<a class="waves-effect waves-light btn">Read More</a>
       </div>
-    </div>
-  </div>
+      
+      
+    
 
 <!--
     <div class="largebox2">
@@ -82,11 +78,11 @@
         <div class="col-sm-4">
         <div class="card"> 
             <img src="images/sample-1.jpg">
-            <span class="card2">{{cards.boxset_image}}</span>
-            <span class="card2">{{cards.boxset_title}}</span>
-            <span class="card2"> {{cards.boxset_seasons}}</span>
-            <span class="card2"> {{cards.boxset_starring}}</span>
-            <span class="card2"> {{cards.boxset_rating}}</span>
+            <span>{{cards.boxset_image}}</span>
+            <span>{{cards.boxset_title}}</span>
+            <span> {{cards.boxset_seasons}}</span>
+            <span> {{cards.boxset_starring}}</span>
+            <span> {{cards.boxset_rating}}</span>
             <a class="waves-effect waves-light btn">button</a>
         </div>
         
