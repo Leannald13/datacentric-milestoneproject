@@ -6,84 +6,100 @@
 </div>
 
 <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="{{ url_for('static', filename='images/slide1.jpg') }}"></a>
-    <a class="carousel-item" href="#two!"><img src="{{ url_for('static', filename='images/slide2.jpg') }}"></a>
-    <a class="carousel-item" href="#three!"><img src="{{ url_for('static', filename='images/slide3.jpg') }}"></a>
-    <a class="carousel-item" href="#four!"><img src="{{ url_for('static', filename='images/slide4.jpg') }}"></a>
+    <a class="carousel-item thecarousel" href="#one!"><img src="{{ url_for('static', filename='images/slide1.jpg') }}"></a>
+    <a class="carousel-item thecarousel" href="#two!"><img src="{{ url_for('static', filename='images/slide2.jpg') }}"></a>
+    <a class="carousel-item thecarousel" href="#three!"><img src="{{ url_for('static', filename='images/slide3.jpg') }}"></a>
+    <a class="carousel-item thecarousel" href="#four!"><img src="{{ url_for('static', filename='images/slide4.jpg') }}"></a>
   </div>
+  
+  
 
 
 <div class="largebox">
 <div class="box3 col-sm-4 row">
 <div class="list-title">
-<h5>Our All Time Favourites!</h5>
+<h5 class="title-list">Our All Time Favourites!</h5>
    <ul class="list body">
-            <li><span class="material-icons">live_tv</span>Westworld 9.2</li>
-            <li><span class="material-icons">live_tv</span>Game of Thrones 9.0</li>
-            <li><span class="material-icons">live_tv</span>Friends 8.9</li>
-            <li><span class="material-icons">live_tv</span>Breaking Bad 8.5</li>
-            <li><span class="material-icons">live_tv</span>The West Wing</li>
-            <li><span class="material-icons">live_tv</span>The Sopranos 8.5</li>
-            <li><span class="material-icons">live_tv</span>The Walking Dead 8.2</li>
-            <li><span class="material-icons">live_tv</span>This Is Us 8.2</li>
-            <li><span class="material-icons">live_tv</span>Parks and Recreation 8.0</li>
-            <li><span class="material-icons">live_tv</span>Arrested Development 7.9</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>Westworld 9.2</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>Game of Thrones 9.0</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>Friends 8.9</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>Breaking Bad 8.5</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>The West Wing</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>The Sopranos 8.5</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>The Walking Dead 8.2</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>This Is Us 8.2</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>Parks and Recreation 8.0</li>
+            <li class="list-content"><span class="material-icons">live_tv</span>Arrested Development 7.9</li>
             </ul>
 </div>
 </div>
 
 <div class="box4 col-sm-4 row">
 <div class="list-title">
-<h5>Your Top Picks!</h5>
+<h5 class="title-list">Your Top Picks!</h5>
    <ul class="list body">
-           <li> <span class="material-icons">live_tv</span>Game of Thrones 9.5</li>
-                <li><span class="material-icons">live_tv</span>Breaking Bad 9.2</li>
-                <li><span class="material-icons">live_tv</span>The Walking Dead 9.1</li>
-                <li><span class="material-icons">live_tv</span>Westworld 8.9</li>
-                <li><span class="material-icons">live_tv</span>Stranger Things 8.8</li>
-                <li><span class="material-icons">live_tv</span>Killing Eve 8.7</li>
-                <li><span class="material-icons">live_tv</span>Ozark 8.3</li>
-                <li><span class="material-icons">live_tv</span>This Is Us 8.5</li>
-                <li><span class="material-icons">live_tv</span>Big Little Lies 8.4</li>
-                <li><span class="material-icons">live_tv</span>Unbelievable 8.1</li>
+           <li class="list-content"><span class="material-icons">live_tv</span>Game of Thrones 9.5</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>Breaking Bad 9.2</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>The Walking Dead 9.1</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>Westworld 8.9</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>Stranger Things 8.8</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>Killing Eve 8.7</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>Ozark 8.3</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>This Is Us 8.5</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>Big Little Lies 8.4</li>
+                <li class="list-content"><span class="material-icons">live_tv</span>Unbelievable 8.1</li>
             </ul>
 </div>
 </div>
 </div>
+
+
     
     {% for cards in homepage %} 
-
+    <div class="largebox2">
     <div class="row">
-        <div class="col-md-6 col-lg-4">
-        <div class="card">
-            <div class="card-image">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/sample-1.jpg"> 
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <span class="card2">{{cards.boxset_image}}</span>
+            <span class="card2">{{cards.boxset_title}}</span>
+            <span class="card2"> {{cards.boxset_seasons}}</span>
+            <span class="card2"> {{cards.boxset_starring}}</span>
+            <span class="card2"> {{cards.boxset_rating}}</span>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--
+    <div class="largebox2">
+    <div class="row-cards" id="series-cards">
+        <div class="col-sm-4">
+        <div class="card"> 
             <img src="images/sample-1.jpg">
-            <span>{{cards.boxset_image}}</span>
-            <div class="card-title">
-            <span>{{cards.boxset_title}}</span>
-            </div>
-            <div class="card-seasons">
-            <span> {{cards.boxset_seasons}}</span>
-            </div>
-            <div class="card-starring">
-            <span> {{cards.boxset_starring}}</span>
-            </div>
-            <div class="card-rating">
-            <span> {{cards.boxset_rating}}</span>
-            </div>
-            <div class="card-readmore">
-            <button type="button" class="btn btn-primary">Read More</button>
-            </div>
+            <span class="card2">{{cards.boxset_image}}</span>
+            <span class="card2">{{cards.boxset_title}}</span>
+            <span class="card2"> {{cards.boxset_seasons}}</span>
+            <span class="card2"> {{cards.boxset_starring}}</span>
+            <span class="card2"> {{cards.boxset_rating}}</span>
+            <a class="waves-effect waves-light btn">button</a>
         </div>
-        </div>
-    </div>
-    </div>
-    </div>
+        
+     -->   
+        
+       
+        
+    
+    
     
     
  {%endfor%}
 {% endblock %}
-
 
 
   
