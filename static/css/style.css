@@ -118,3 +118,17 @@
     margin-top: 80px;
     margin-right: 100px;
 }
+
+/* addseries.html background and form */
+
+.addseriesbackground {
+    background-color: black;
+    width: 100%;
+    height: 900px;
+}
+
+.smallbox {
+    background-color: pink;
+    width: 70%;
+    height: 750px;
+}
