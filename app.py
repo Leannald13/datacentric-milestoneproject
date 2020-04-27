@@ -32,11 +32,22 @@ def add_user():
 def home_page():
     return render_template("home.html", homepage=mongo.db.homepage.find())
 
+@app.route('/view_page') 
+def view_page():
+    return render_template("view.html", homepage=mongo.db.homepage.find())
+
 @app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
     addboxset = mongo.db.addboxset
     addboxset.insert_one(request.form.to_dict())
     return redirect(url_for('add_boxset'))
+
+
+@app.route('/view_boxset/<boxset_id>')
+def view_boxset(boxset_id):
+    homepage = mongo.db.homepage
+    my_boxset = homepage.find_one({"_id": ObjectId(boxset_id)})
+    return render_template('view.html', homepage=my_boxset)
 
 
 if __name__ == '__main__':
