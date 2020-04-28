@@ -49,12 +49,33 @@ def view_boxset(cards_id):
     return render_template('view.html', cards=cards)
 
 
+    """
 @app.route('/add_review/<cards_id>', methods = ["GET", "POST"])
 def add_review(cards_id):
     review = mongo.db.review
     cards = review.find_one({"_id": ObjectId(cards_id)})
     return render_template('addreview.html', cards=cards)
+    """ 
+
     
+@app.route('/add_review/<cards_id>', methods=["POST"])
+def add_review(cards_id):
+    cards = mongo.db.review
+    mongo.db.review.update({"_id": ObjectId(cards_id)}), 
+
+    if request.method == "POST":
+
+        { 
+        'review_rating': request.form.get('review_rating'),
+        'review_message': request.form.get('review_message')
+
+        }
+
+    cards.insert_one(request.form.to_dict())
+
+    return render_template('addreview.html', cards=cards)
+     
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',
