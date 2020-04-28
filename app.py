@@ -47,19 +47,14 @@ def view_boxset(cards_id):
     homepage = mongo.db.homepage
     cards = homepage.find_one({"_id": ObjectId(cards_id)})
     return render_template('view.html', cards=cards)
-    
+
 
 @app.route('/add_review/<cards_id>', methods = ["GET", "POST"])
 def add_review(cards_id):
-
-    if request.method == "POST":
-        message = request.form["message"]
-        return redirect(session["message"])
-
-    homepage = mongo.db.homepage
-    cards = homepage.find_one({"_id": ObjectId(cards_id)})
+    review = mongo.db.review
+    cards = review.find_one({"_id": ObjectId(cards_id)})
     return render_template('addreview.html', cards=cards)
-
+    
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',
