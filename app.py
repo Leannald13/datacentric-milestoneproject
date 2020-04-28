@@ -32,9 +32,6 @@ def add_user():
 def home_page():
     return render_template("home.html", homepage=mongo.db.homepage.find())
 
-@app.route('/view_page') 
-def view_page():
-    return render_template("view.html", homepage=mongo.db.homepage.find())
 
 @app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
@@ -43,11 +40,11 @@ def insert_boxset():
     return redirect(url_for('add_boxset'))
 
 
-@app.route('/view_boxset/<boxset_id>')
-def view_boxset(boxset_id):
+@app.route('/view_boxset/<cards_id>')
+def view_boxset(cards_id):
     homepage = mongo.db.homepage
-    my_boxset = homepage.find_one({"_id": ObjectId(boxset_id)})
-    return render_template('view.html', homepage=my_boxset)
+    cards = homepage.find_one({"_id": ObjectId(cards_id)})
+    return render_template('view.html', cards=cards)
 
 
 if __name__ == '__main__':

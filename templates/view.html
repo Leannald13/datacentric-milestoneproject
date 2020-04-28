@@ -1,41 +1,39 @@
 {% extends 'base.html' %}   
 {% block content %}
 
- {% for cards in homepage %} 
-
+    <div class="viewseriesbackground">
+    <div class="viewseriesbox">
     <div class="row">
-        <h3> {{cards.boxset_title}}</h3> 
+        <h3 class="viewtext">{{cards.boxset_title}}</h3> 
     </div> 
     <div class="row">
         <div class="col s6 heading">
-            <p>{{cards.boxset_image}} </p> 
+            <p class="viewtext">{{cards.boxset_image}} </p> 
         </div>
         <div class="col s6 heading">
-            <p>{{cards.boxset_seasons}}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s6 heading">
-        <p>{{cards.boxset_starring}}</p>
+            <p class="viewtext">{{cards.boxset_seasons}}</p>
         </div>
     </div>
     <div class="row">
         <div class="col s6 heading">
-        <p>{{cards.boxset_rating}}</p> 
+        <p class="viewtext">{{cards.boxset_starring}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6 heading">
+        <p class="viewtext">{{cards.boxset_rating}}</p> 
     </div> 
     </div>      
     <div class="row">
     <div class="col s6 heading">
-        <p>{{cards.boxset_rating}}</p>
+        <p class="viewtext">{{cards.boxset_rating}}</p>
     </div> 
     </div>
     <div class="row">
     <div class="col s6 heading">
-        <p>{{cards.boxset_summary}}</p>
+        <p class="viewtext">{{cards.boxset_summary}}</p>
+    </div>
     </div>
     </div> 
- 
-
-  {%endfor%}
-
+    </div>
 {% endblock %}

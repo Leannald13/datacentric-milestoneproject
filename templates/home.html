@@ -66,7 +66,7 @@
      <span class="thetext"> {{cards.boxset_starring}}</span><br>
      <span class="thetext"> {{cards.boxset_rating}}</span><br>
      
-<a class="waves-effect waves-light btn">Read More</a>
+<a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn">Read More</a>
       </div>
  
  {%endfor%}
