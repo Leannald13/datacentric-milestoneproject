@@ -1,0 +1,41 @@
+{% extends 'base.html'%} 
+{% block title %}Registration |{% endblock %}  
+{% block content %}
+
+
+<div class="container">
+	<div class="row">
+		<form method="POST" action="{{ url_for('register') }}" class="col s12 form-panel">
+        <h1>Registration</h1>
+        <!-- Username Input -->
+			<div class="row form-row">
+				<div class="input-field col s12 center-align">
+					<i class="material-icons prefix">person</i>
+					<input type="text" class="form-control" name="username" id="username" placeholder="Username">
+					<label for="username">Username</label>
+				</div>
+			</div>
+
+            <!-- Password Input -->
+
+			<div class="row form-row">
+				<div class="input-field col s12 center-align">
+					<i class="material-icons prefix">vpn_key</i>
+					<input type="password" class="form-control" name="password" id="password" placeholder="Password">
+					<label for="password">Password</label>
+				</div>
+			</div>
+
+            <!-- Login Button -->
+
+			<div class="row form-row">
+				<div class="input-field col s12 center-align">
+					<button type="submit" class="btn btn-large">Register</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+ {%endfor%}
+{% endblock %}

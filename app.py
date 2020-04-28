@@ -1,7 +1,9 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo 
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.exceptions import HTTPException
 
 app = Flask(__name__)
 
@@ -45,6 +47,18 @@ def view_boxset(cards_id):
     homepage = mongo.db.homepage
     cards = homepage.find_one({"_id": ObjectId(cards_id)})
     return render_template('view.html', cards=cards)
+    
+
+@app.route('/add_review/<cards_id>', methods = ["GET", "POST"])
+def add_review(cards_id):
+
+    if request.method == "POST":
+        message = request.form["message"]
+        return redirect(session["message"])
+
+    homepage = mongo.db.homepage
+    cards = homepage.find_one({"_id": ObjectId(cards_id)})
+    return render_template('addreview.html', cards=cards)
 
 
 if __name__ == '__main__':
