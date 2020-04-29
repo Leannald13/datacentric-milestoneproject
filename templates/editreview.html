@@ -5,14 +5,16 @@
 <div class="row">
     <div class="viewseriesbackground col s12">
         <div class="viewseriesbox">
-            <form action="{{ url_for('add_review', boxset_id=boxset._id) }}" method="POST" class="col s12">
+            <form action="{{ url_for('edit_review', boxset_id=boxset._id, review_id=review_id) }}" method="POST" class="col s12">
                 <div class="row">
                     <div class="input-field col s12">    
-                        <input id="review_rating" name="review_rating" type="text" class="validate" required>
+                        <input id="review_rating" name="review_rating" type="text" value="{{review.review_rating}}" class="validate" required>
                         <label for="review_rating">How would you rate it out of 10?</label>
                     </div>
                     <div class="input-field col s12">
-                        <textarea id="review_message" name="review_message" class="materialize-textarea"></textarea>
+                        <textarea id="review_message" name="review_message" class="materialize-textarea">
+                            {{-review.review_message-}}
+                        </textarea>
                         <label for="review">Add Your Review!</label>
                     </div>  
                 </div>
