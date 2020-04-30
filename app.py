@@ -34,13 +34,17 @@ def add_user():
 def home_page():
     return render_template("home.html", addboxset=mongo.db.addboxset.find())
 
+@app.route('/all_boxsets')
+def all_boxsets():
+    return render_template("allseries.html", addboxset=mongo.db.addboxset.find())
+
 
 @app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
     addboxset = mongo.db.addboxset
     starring = request.form.get("boxset_starring").splitlines()
     boxset = {
-        "boxset_image": request.form.get("boxset_image"),
+        "boxset_image_url": request.form.get("boxset_image_url"),
         "boxset_title": request.form.get("boxset_title"),
         "boxset_seasons": request.form.get("boxset_seasons"),
         "boxset_starring": starring,
@@ -68,7 +72,7 @@ def update_boxset(boxset_id):
     addboxset = mongo.db.addboxset
     starring = request.form.get("boxset_starring").splitlines()
     boxset = {
-        "boxset_image": request.form.get("boxset_image"),
+        "boxset_image_url": request.form.get("boxset_image_url"),
         "boxset_title": request.form.get("boxset_title"),
         "boxset_seasons": request.form.get("boxset_seasons"),
         "boxset_starring": starring,
