@@ -14,8 +14,8 @@ mongo = PyMongo(app)
     
 
 @app.route('/')
-def index():
-    return render_template("index.html", review=mongo.db.review.find())
+def home_page():
+    return render_template("home.html", addboxset=mongo.db.addboxset.find())
 
 @app.route('/add_new') 
 def add_new():
@@ -30,9 +30,6 @@ def add_boxset():
 def add_user():
     return render_template("userinfo.html", user=mongo.db.user.find())
 
-@app.route('/home_page') 
-def home_page():
-    return render_template("home.html", addboxset=mongo.db.addboxset.find())
 
 @app.route('/all_boxsets')
 def all_boxsets():
@@ -51,8 +48,9 @@ def insert_boxset():
         "boxset_rating": request.form.get("boxset_rating"),
         "boxset_summary": request.form.get("boxset_summary"),
     }
-    addboxset.insert_one(boxset)
-    return redirect(url_for('add_boxset'))
+    addboxset.insert_one(boxset)  
+    return redirect(url_for('view_boxset'))
+
 
 
 @app.route('/edit_boxset/<boxset_id>')
@@ -79,17 +77,18 @@ def update_boxset(boxset_id):
         "boxset_rating": request.form.get("boxset_rating"),
         "boxset_summary": request.form.get("boxset_summary"),
     }
-    mongo.db.addboxset.update({"_id": ObjectId(boxset_id)}, boxset)
-    return redirect(url_for('add_boxset'))
+    
+    mongo.db.addboxset.update({"_id": ObjectId(boxset_id)}, boxset) 
+    return redirect(url_for('view_boxset', cards_id=boxset_id))
+    # a GET request means we want to return the html page
+    return render_template('addreview.html', boxset=boxset)
 
 
 @app.route('/view_boxset/<cards_id>', methods = ["GET", "POST"])
 def view_boxset(cards_id):
     addboxset = mongo.db.addboxset
     cards = addboxset.find_one({"_id": ObjectId(cards_id)})
-    
     boxset_reviews = mongo.db.review.find({}, {"boxset_id": cards_id})
-
     return render_template('view.html', cards=cards, reviews=boxset_reviews)
 
 
