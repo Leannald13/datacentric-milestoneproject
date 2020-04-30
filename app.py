@@ -57,6 +57,12 @@ def edit_boxset(boxset_id):
     return render_template("editseries.html", boxset=boxset)
 
 
+@app.route('/delete_boxset/<cards_id>')
+def delete_boxset(cards_id):
+    cards = mongo.db.addboxset.remove({'_id': ObjectId(cards_id)})
+    return redirect(url_for('add_boxset'))
+
+
 @app.route('/update_boxset/<boxset_id>', methods=['POST'])
 def update_boxset(boxset_id):
     addboxset = mongo.db.addboxset
