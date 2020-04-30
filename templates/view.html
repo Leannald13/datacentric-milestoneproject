@@ -7,22 +7,20 @@
 <div class="viewseriesbackground">
 	<div class="viewseriesbox">
 		<div class="row">
-			<h3 class="viewtext">{{cards.boxset_title}}</h3>
+			<h3 class="viewtextheading">{{cards.boxset_title}}</h3>
 		</div>
 		<div class="row">
 			<div class="col s6 heading">
 				<img class="viewtextimage" src="{{cards.boxset_image_url}}"><br>
-			</div>
-			<div class="col s6 heading">
-				<p class="viewtext">{{cards.boxset_seasons}}</p>
-			</div>
+			</div>    
 		</div>
 		<div class="row">
 			<div class="col s6 heading">
 				<p class="viewtext">
 					<ul>
 						{% for actor in cards.boxset_starring %}
-						<li>{{ actor }}</li>
+                        
+						<li class="viewtext">{{ actor }}</li>
 						{% endfor %}
 					</ul>
 				</p>
@@ -30,12 +28,8 @@
 		</div>
 		<div class="row">
 			<div class="col s6 heading">
-				<p class="viewtext">{{cards.boxset_rating}}</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s6 heading">
-				<p class="viewtext">{{cards.boxset_rating}}</p>
+                <p class="viewtext">{{cards.boxset_seasons}} Seasons</p>
+				<p class="viewtext">Our Rating: {{cards.boxset_rating}}</p>
 			</div>
 		</div>
 		<div class="row">
@@ -43,7 +37,6 @@
 				<p class="viewtext">{{cards.boxset_summary}}</p>
 			</div>
 		</div>
-
         <div class="row">
             <div class="col s6 heading">
                 {% for review in cards.boxset_reviews %}

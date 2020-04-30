@@ -64,7 +64,7 @@
     display: inline-block;
     background-color: #1a1110;
     width: 400px;
-    height: 380px;
+    height: 430px;
     border-width: 3px;
     border-color: #10aea6;
     border-style: solid;
@@ -80,7 +80,7 @@
     display: inline-block;
     background-color: #1a1110;
     width: 400px;
-    height: 380px;
+    height: 430px;
     border-width: 3px;
     border-color: #10aea6;
     border-style: solid;
@@ -89,16 +89,23 @@
        
 }
 
-.material-icons {
+.homeicon {
     color: white;
+    padding-right: 15px;
 }
 
 .list-content {
     color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    padding: 2px 2px 2px 2px;
+    
 }
 
 .title-list {
     color: white;
+    font-family: 'Barlow', sans-serif;
+    margin-left: 40px;
 }
 
 /* home.html boxset cards */
@@ -156,9 +163,18 @@
     
 }
 
+.viewtextheading {
+    color: white;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+}
+
 .viewtext {
     color: white;
     text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
 }
 
 .viewtextimage {
@@ -170,6 +186,7 @@
     width: 70%;
     height: 1000px;
     background-color: purple;
+    margin-left: 200px;
 }
 
 
@@ -186,10 +203,16 @@
 .minibox1 {  
     margin-right: 200px;
     background-color: #1a1110;
-    width: 250px;
-    height: 350px;
+    width: 450px !important;
+    height: 500px !important;
     border-width: 3px;
     border-color: #f62681;
     border-style: solid;
     box-shadow: 8px 8px 8px 8px #f62681;
     margin-top: 100px;
+}
+
+.thetextimage2 {
+    width: 400px !important;
+    height: 300px !important;
+}
