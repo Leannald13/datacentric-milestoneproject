@@ -7,6 +7,8 @@
 
 .panel {
     height: 120px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .main-title {
@@ -14,10 +16,18 @@
     font-family: 'Righteous', cursive;
     font-size: 50px;
     margin-left: 30px;
+    padding-top: 20px;
     
 }
 
 .main-subtitle {
+    color: black;
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+}
+
+.main-subtitle:hover {
+    background-color:#FFDC40;
     color: black;
     font-family: 'Righteous', cursive;
     font-size: 30px;
@@ -58,9 +68,9 @@
 .largebox {
         box-sizing: border-box;
         width: 100%;
-        height: 600px;
+        height: 650px;
         background-color: black;
-        margin-top: 50px;
+        padding-top: 70px;
         padding-bottom: 100px;
     }
 
@@ -73,8 +83,8 @@
     border-color: #10aea6;
     border-style: solid;
     box-shadow: 10px 12px 12px #10aea6;
-    margin-right: 250px;
-    margin-left: 60px;
+    margin-right: 360px;
+    margin-left: 80px;
     margin-top: 20px;
     padding-left: 50px;
     padding-bottom: 20px;
@@ -112,6 +122,17 @@
     margin-left: 40px;
 }
 
+.button-home {
+    background-color: #f62681;
+    border-radius: 5px;
+}
+
+.button-home:hover {
+    background-color: #f62681;
+    border-radius: 5px;
+}
+
+
 /* home.html boxset cards */
 
 .largebox2 {
@@ -123,6 +144,14 @@
 .thetext {
     color: white;
     text-align: center;
+    font-size: 20px;
+}
+
+.thetexttitle {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    
 }
 
 .thetextimage {
@@ -148,13 +177,15 @@
     background-color: black;
     width: 100%;
     height: 1300px;
+    margin: 0;
+    padding: 0;
 }
 
 .smallbox {
     background-color: pink;
     width: 70%;
     height: 750px;
-    margin-top: 100px;
+    padding-top: 50px;
 }
 
 
@@ -221,5 +252,20 @@
     height: 300px !important;
 }
 
+.search-bar {
+     background-color: #FFDC40;
+     text-align: center;
+}
+
+span search-icon {
+    color: black;
+    font-size: 70px !important;
+}
+
+
+#myInput {
+    color: black !important;
+    font-size: 30px;
+}
 
 /* editseries.html */

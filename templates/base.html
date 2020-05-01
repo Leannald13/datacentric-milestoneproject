@@ -5,6 +5,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Righteous&family=Shadows+Into+Light&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
     <title>Couch Potato</title>
 </head>
@@ -14,8 +15,9 @@
     <div class="nav-wrapper main-heading">
       <a href="#" class="main-title">Couch Potato</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-         <li><a href="{{url_for('home_page')}}" class="main-subtitle" >Home</a></li>
-        <li><a href="{{url_for('all_boxsets')}}" class="main-subtitle">All Boxsets</a></li>
+         <li><a href="{{url_for('home_page')}}" class="main-subtitle button hvr-wobble-horizontal" >Home</a></li>
+        <li><a href="{{url_for('all_boxsets')}}" class="main-subtitle button hvr-wobble-horizontal">All Boxsets</a></li>
+        <li><a href="{{url_for('add_boxset')}}" class="main-subtitle button hvr-wobble-horizontal">Add a Boxsets</a></li>
       </ul>
     </div>
   </nav>
