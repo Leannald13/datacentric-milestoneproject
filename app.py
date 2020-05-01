@@ -49,7 +49,7 @@ def insert_boxset():
         "boxset_summary": request.form.get("boxset_summary"),
     }
     addboxset.insert_one(boxset)  
-    return redirect(url_for('view_boxset'))
+    return redirect(url_for('all_boxsets'))
 
 
 
@@ -62,7 +62,7 @@ def edit_boxset(boxset_id):
 @app.route('/delete_boxset/<cards_id>')
 def delete_boxset(cards_id):
     cards = mongo.db.addboxset.remove({'_id': ObjectId(cards_id)})
-    return redirect(url_for('add_boxset'))
+    return redirect(url_for('all_boxsets'))
 
 
 @app.route('/update_boxset/<boxset_id>', methods=['POST'])
@@ -125,10 +125,6 @@ def edit_review(boxset_id, review_id):
         return redirect(url_for('view_boxset', cards_id=boxset_id))
     # GET request
     return render_template('editreview.html', boxset=boxset, review_id=review, review=review)
-
-
-
-     
 
 
 if __name__ == "__main__":
