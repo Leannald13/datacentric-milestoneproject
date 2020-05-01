@@ -108,25 +108,6 @@ def add_review(boxset_id):
     return render_template('addreview.html', boxset=boxset)
 
 
-@app.route('/edit_review/<boxset_id>/<review_id>', methods=["GET", "POST"])
-def edit_review(boxset_id, review_id):
-    boxset = mongo.db.addboxset.find_one({"_id": ObjectId(boxset_id)})
-    review_array = mongo.db.addboxset.find_one({"_id": ObjectId(boxset_id)})["boxset_reviews"]
-    review = ""
-    for item in review_array:
-        if int(review_array.index(item)) == int(review_id):
-            review = item
-    if request.method == "POST":
-        form = {
-            "review_rating": request.form.get("review_rating"),
-            "review_message": request.form.get("review_message"),
-        }
-        mongo.db.addboxset.update_one({"_id": ObjectId(boxset_id)}, {"$push": {"boxset_reviews": form}})
-        return redirect(url_for('view_boxset', cards_id=boxset_id))
-    # GET request
-    return render_template('editreview.html', boxset=boxset, review_id=review, review=review)
-
-
 if __name__ == "__main__":
         app.run(host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),

@@ -1,18 +1,24 @@
 {% extends 'base.html' %}   
 {% block content %}
 
+<div class="search-bar">
+<input type="text" id="myInput" name="myInput" placeholder="Search Boxset">
+
+
 {% for cards in addboxset %} 
 
-  <div class="row largebox4"> 
-      <div class="col s4 minibox1">  
-      <img class="thetextimage" src="{{cards.boxset_image_url}}"><br>
-      <span class="thetext">{{cards.boxset_title}}</span><br>
-     <span class="thetext"> {{cards.boxset_seasons}}</span><br>
-     <span class="thetext"> {{cards.boxset_starring}}</span><br>
-     <span class="thetext"> {{cards.boxset_rating}}</span><br>
+
+
+  <div id="myList" class="row largebox4"> 
+      <ul class="col s4 minibox1">  
+      <li><img class="thetextimage" src="{{cards.boxset_image_url}}"></li><br>
+      <li class="thetext">{{cards.boxset_title}}</li><br>
+     <li class="thetext"> {{cards.boxset_seasons}}</li><br>
+     <li class="thetext"> {{cards.boxset_starring}}</li><br>
+     <li class="thetext"> {{cards.boxset_rating}}</li><br>
      
 <a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn">Read More</a>
-      </div>
+      </ul>
 
 {%endfor%}
 <ul class="pagination">
@@ -24,6 +30,7 @@
     <li class="waves-effect"><a href="#!">5</a></li>
     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
   </ul>
+  </div>
 {% endblock %}
 
  
