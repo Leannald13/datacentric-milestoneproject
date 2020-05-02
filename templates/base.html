@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Righteous&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Righteous&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
     <title>Couch Potato</title>
@@ -13,7 +13,7 @@
     <header> 
     <nav class="panel">
     <div class="nav-wrapper main-heading">
-      <a href="#" class="main-title">Couch Potato</a>
+      <a href="#" class="main-title">Couch Potato<span class="material-icons navtv">live_tv</span></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
          <li><a href="{{url_for('home_page')}}" class="main-subtitle button hvr-wobble-horizontal" >Home</a></li>
         <li><a href="{{url_for('all_boxsets')}}" class="main-subtitle button hvr-wobble-horizontal">All Boxsets</a></li>
@@ -22,9 +22,12 @@
     </div>
   </nav>
 </header>
+
+ 
      
     {% block content %}
     {% endblock %}
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -32,7 +35,6 @@
     <script src="{{url_for('static', filename='js/options.js')}}"></script>
     <script src="{{url_for('static', filename='js/searchbox.js')}}"></script>
 
-
-
 </body>
+
 </html>

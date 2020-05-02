@@ -10,27 +10,16 @@
 
 
   <div id="myList" class="row largebox4"> 
-      <ul class="col s4 minibox1">  
-      <li><img class="thetextimage" src="{{cards.boxset_image_url}}"></li><br>
-      <li class="thetext">{{cards.boxset_title}}</li><br>
-     <li class="thetext"> {{cards.boxset_seasons}}</li><br>
-     <li class="thetext"> {{cards.boxset_starring}}</li><br>
-     <li class="thetext"> {{cards.boxset_rating}}</li><br>
+      <ul class="col s3 minibox1">  
+      <li><img class="allseriesimage" src="{{cards.boxset_image_url}}"></li><br>
+      <li class="allseriestitles">{{cards.boxset_title}}</li><br>
+      <li class="allseriestext"> Starring {{cards.boxset_starring}}</li><br>
+      <li class="allseriestext"> Our Rating {{cards.boxset_rating}}</li><br>
      
 <a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn">Read More</a>
       </ul>
 
 {%endfor%}
-<ul class="pagination">
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  </ul>
-  </div>
 {% endblock %}
 
  

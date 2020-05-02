@@ -53,14 +53,13 @@
 </div>
 </div>
 
-
     
     {% for cards in addboxset %}
     {% if loop.index < 5 %}
 
         
-    
-     <div class="row largebox2">
+   
+     <div class="row largebox2 ">
       <div class="col s2 minibox">  
       <img class="thetextimage" src="{{cards.boxset_image_url}}"><br>
       <span class="thetexttitle">{{cards.boxset_title}}</span><br>
@@ -68,11 +67,18 @@
      
 <a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn button-home button hvr-wobble-horizontal">Read More</a>
       </div>
+    
+    
  
 
 {% endif %}
 {% endfor %} 
+
+ 
+
 {% endblock %}
+
+
 
 
   
