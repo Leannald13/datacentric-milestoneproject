@@ -2,13 +2,14 @@
 {% block content %}
 
 <div class="search-bar">
-<span class="material-icons">search<input type="text" id="myInput" name="myInput" placeholder="Search Boxset"></span>
+<span class="material-icons">search<input type="text" class="myInput" name="myInput" placeholder="Search Boxset"></span>
 
 
 {% for cards in addboxset %} 
 
 
 
+    
   <div id="myList" class="row largebox4"> 
       <ul class="col s3 minibox1">  
       <li><img class="allseriesimage" src="{{cards.boxset_image_url}}"></li><br>
@@ -18,6 +19,8 @@
      
 <a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn">Read More</a>
       </ul>
+      
+
 
 {%endfor%}
 {% endblock %}

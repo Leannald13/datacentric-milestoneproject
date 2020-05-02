@@ -35,7 +35,6 @@ def add_user():
 def all_boxsets():
     return render_template("allseries.html", addboxset=mongo.db.addboxset.find())
 
-
 @app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
     addboxset = mongo.db.addboxset
