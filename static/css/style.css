@@ -62,7 +62,7 @@
 /* home.html image carousel and top ratings lists */
 
 .thecarousel {
-    height: 270px;
+    height: 250px !important;
     width: 100%;
 }
 
