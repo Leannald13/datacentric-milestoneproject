@@ -87,6 +87,7 @@
 .newseason {
     color: white;
 }
+
 .box3 {
     display: inline-block;
     background-color: #1a1110;
@@ -189,12 +190,62 @@
 }
 
 .smallbox {
-    background-color: pink;
+    background-color:#1a1110;
     width: 70%;
-    height: 750px;
+    height: 1000px;
+    border: 6px solid;
+    border-color: #10aea6;
     padding-top: 50px;
 }
 
+.addseriesicon {
+    color: white;
+    font-size: 30px;
+    
+}
+
+
+#addseriesimage {
+    color: white;
+    font-size: 15px;
+    
+}
+
+#addseriestitle {
+    color: white;
+    font-size: 15px;
+    
+}
+
+#addseriesseasons {
+    color: white;
+    font-size: 15px;
+  
+}
+
+#addseriesstarring {
+    color: white;
+    font-size: 15px;
+      
+}
+
+#addseriesrating {
+    color: white;
+    font-size: 15px;
+    
+}
+
+#addseriessummary {
+    color: white;
+    font-size: 15px;
+   
+}
+
+.addseriesheading {
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
 
 /* view.html */
 
@@ -243,7 +294,7 @@
 }
 
 .minibox1 {  
-    padding-left: 100px;
+    margin-right: 45px;
     background-color: #1a1110;
     width: 400px !important;
     height: 500px;
@@ -251,11 +302,14 @@
     border-color: #f62681;
     border-style: solid;
     margin-top: 100px;
+
 }
 
 .allseriesimage {
-    width: 350px;
+    width: 390px;
     height: 200px;
+    text-align: center;
+    
 }
 
 .allseriestitles {
