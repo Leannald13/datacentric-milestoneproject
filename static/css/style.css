@@ -43,6 +43,26 @@
     padding-top: 10px;
 }
 
+
+/* base.html footer */
+
+
+.page-footer {
+     background-color: #FFDC40;
+     width: 100%;
+     height: inherit;
+}
+
+.footer-heading {
+    color: black;
+}
+
+.footer-subheading {
+    color: black;
+    font-size: 15px;
+}
+
+
 /* home.html */
 
 

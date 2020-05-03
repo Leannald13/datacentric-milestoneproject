@@ -1,4 +1,5 @@
 import os
+import math
 from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo 
 from bson.objectid import ObjectId
@@ -33,6 +34,7 @@ def add_user():
 
 @app.route('/all_boxsets')
 def all_boxsets():
+
     return render_template("allseries.html", addboxset=mongo.db.addboxset.find())
 
 

@@ -9,7 +9,9 @@
           <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix addseriesicon">insert_photo</i>
-                <input value="{{boxset_image_url}}" data-icon="{{boxset_image_url}}">"{{boxset_image_url}}" required>
+                 {% for cards in addboxset %}
+                <option value="{{boxset_image_url}}" data-icon="{{boxset_image_url}}">{{boxset_image_url}}</option>
+                {% endfor %}                
                 <label for="boxset_image" id="addseriesimage">Upload the Image link</label>
             </div>
         </div>
