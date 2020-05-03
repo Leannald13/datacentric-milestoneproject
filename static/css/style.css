@@ -35,7 +35,6 @@
 
 }
 
-
 .navtv {
     color: black;
     font-size: 60px;
@@ -44,93 +43,64 @@
 }
 
 
-/* base.html footer */
-
-
-.page-footer {
-     background-color: #FFDC40;
-     width: 100%;
-     height: inherit;
-}
-
-.footer-heading {
-    color: black;
-}
-
-.footer-subheading {
-    color: black;
-    font-size: 15px;
-}
 
 
 /* home.html */
 
 
-.box1 {
+.westworldbox {
     background-color: black;
     width: 100%;
-    height: 200px;
+    height: 260px;
+    
 }
 
 .westworld {
     height: 150px;
     width: 60%;
     margin-left: 280px;
-    margin-top: 30px;
+    margin-top: 50px;
+   
 }
 /* home.html image carousel and top ratings lists */
 
 .carousel {
-    padding-top: 30px;
     height: 400px !important;
     width: 100%;
 }
 
-.box2 {
-    width: 100%;
-    height: 400px;
-    background-color: gray;
-    margin-top: 70px;
-    border-width: 7px;
-    border-color: black;
-}
 
-.largebox {
-        box-sizing: border-box;
-        width: 100%;
-        height: 650px;
-        background-color: black;
-        padding-top: 70px;
-        padding-bottom: 100px;
+.largeboxhome {
+    box-sizing: border-box;
+    width: 100%;
+    height: 650px;
+    background-color: black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
     }
     
-.newseason {
-    color: white;
-}
 
-.box3 {
+.box1 {
     display: inline-block;
     background-color: #1a1110;
     width: 400px;
-    height: 430px;
+    height: 470px;
     box-shadow: 10px 12px 12px #10aea6;
     border: 1px solid #10aea6;
-    margin-right: 360px;
-    margin-left: 80px;
-    margin-top: 20px;
+    margin: 20px 360px 0 80px;
     padding-left: 50px;
-    padding-bottom: 20px;
+    
 }
 
-.box4 {
+.box2 {
     display: inline-block;
     background-color: #1a1110;
     width: 400px;
-    height: 430px;
+    height: 470px;
     border: 1px solid #10aea6;
     box-shadow: 10px 12px 12px #10aea6;
     padding-left: 50px;
-       
 }
 
 .homeicon {
@@ -144,23 +114,23 @@
     font-size: 17px;
     padding: 2px 2px 2px 2px;
     
+    
 }
 
-.title-list {
+.list-title {
     color: white;
     font-family: 'Barlow', sans-serif;
     margin-left: 40px;
 }
 
-.button-home {
+.button-homepage {
     background-color: #f62681;
     border: 0.5px solid black;
     border-radius: 5px;
-    margin-top: 20px;
     float: right;
 }
 
-.button-home:hover {
+.button-homepage:hover {
     background-color:#f62681;
     border-radius: 5px;
 }
@@ -168,26 +138,41 @@
 
 /* home.html boxset cards */
 
-.largebox2 {
+.largebox1 {
     width: 100%;
     height: 600px;
     background-color: black;
 }
 
-.thetext {
+.miniboxrating {
     color: white;
     text-align: center;
     font-size: 20px;
+    font-family: 'Barlow', sans-serif;
 }
 
-.thetexttitle {
-    color: white;
-    text-align: center;
-    font-size: 35px;
+.material-icons {
+    color: black;
+    padding-right: 10px;
+    margin-top: 5px;
     
 }
 
-.thetextimage {
+.miniboxtitle {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Barlow', sans-serif;
+    
+}
+
+.miniboxparagraph {
+    color: white;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.miniboximage {
     width: 260px;
     height: 200px;
     text-align: center;
@@ -237,36 +222,42 @@
 #addseriesimage {
     color: white;
     font-size: 15px;
+    font-family: 'Barlow', sans-serif;
     
 }
 
 #addseriestitle {
     color: white;
     font-size: 15px;
+    font-family: 'Barlow', sans-serif;
     
 }
 
 #addseriesseasons {
     color:  white;
     font-size: 15px;
+    font-family: 'Barlow', sans-serif;
   
 }
 
 #addseriesstarring {
     color: white;
     font-size: 15px;
+    font-family: 'Barlow', sans-serif;
       
 }
 
 #addseriesrating {
     color: white;
     font-size: 15px;
+    font-family: 'Barlow', sans-serif;
     
 }
 
 #addseriessummary {
     color: white;
     font-size: 15px;
+    font-family: 'Barlow', sans-serif;
    
 }
 
@@ -275,6 +266,7 @@
     text-align: center;
     padding-bottom: 20px;
     padding-top: 20px;
+    font-family: 'Barlow', sans-serif;
 }
 
 .button-addseries {
@@ -298,8 +290,8 @@
 .viewtextheading {
     color: white;
     text-align: center;
-    font-family: 'Righteous', cursive;
     font-size: 50px;
+    font-family: 'Barlow', sans-serif;
 }
 
 .viewtext {
@@ -308,7 +300,6 @@
     font-family: 'Barlow', sans-serif;
     font-size: 20px;
     margin-left: 150px;
-    
   
 }
 
@@ -332,6 +323,12 @@
 
 /* allseries.html */
 
+
+::placeholder {
+  color: black;
+  opacity: 1; 
+  font-size: 25px;
+}
 .largebox4 {
     width: 100%;
     height: 1950px !important;
@@ -379,9 +376,5 @@
   opacity: 1; 
   font-size: 25px;
 }
-
-
-
-
 /* editseries.html */
 

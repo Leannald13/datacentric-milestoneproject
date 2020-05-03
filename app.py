@@ -75,15 +75,14 @@ def update_boxset(boxset_id):
         "boxset_starring": request.form.get("boxset_starring"),
         "boxset_rating": request.form.get("boxset_rating"),
         "boxset_summary": request.form.get("boxset_summary"),
-    }
-    
+    }   
     mongo.db.addboxset.update({"_id": ObjectId(boxset_id)}, boxset) 
     return redirect(url_for('view_boxset', cards_id=boxset_id))
     # a GET request means we want to return the html page
     return render_template('addreview.html', boxset=boxset)
 
 
-@app.route('/view_boxset/<cards_id>', methods = ["GET", "POST"])
+@app.route('/view_boxset/<cards_id>', methods=["GET", "POST"])
 def view_boxset(cards_id):
     addboxset = mongo.db.addboxset
     cards = addboxset.find_one({"_id": ObjectId(cards_id)})
