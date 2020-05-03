@@ -34,7 +34,6 @@ def add_user():
 
 @app.route('/all_boxsets')
 def all_boxsets():
-
     return render_template("allseries.html", addboxset=mongo.db.addboxset.find())
 
 

@@ -368,6 +368,12 @@
      
 }
 
+::placeholder {
+  color: black;
+  opacity: 1; 
+  font-size: 25px;
+}
+
 
 
 
