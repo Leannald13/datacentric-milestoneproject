@@ -8,10 +8,8 @@
         <h3 class="addseriesheading">Share your favourite boxset with us!</h3>
           <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix addseriesicon">insert_photo</i>
-                 {% for cards in addboxset %}
-                <option value="{{boxset_image_url}}" data-icon="{{boxset_image_url}}">{{boxset_image_url}}</option>
-                {% endfor %}                
+                <i class="material-icons prefix addseriesicon">insert_photo</i>  
+                <img >               
                 <label for="boxset_image" id="addseriesimage">Upload the Image link</label>
             </div>
         </div>
@@ -51,8 +49,7 @@
             </div>
         </div>
         <div class="row">
-            <button class="btn waves-effect waves-light addbutton" type="submit" name="action">Add A Boxset
-                <i class="material-icons">playlist_add</i>
+            <button class="button-addseries button hvr-wobble-horizontal" type="submit" name="action">Add A Boxset
             </button>
         </div>
     </form>
