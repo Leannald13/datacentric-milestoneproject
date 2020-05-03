@@ -15,7 +15,7 @@ mongo = PyMongo(app)
     
 
 @app.route('/')
-def home_page():
+def home_page():  
     return render_template("home.html", addboxset=mongo.db.addboxset.find())
 
 @app.route('/add_new') 
