@@ -337,6 +337,7 @@
     text-align: center;
     margin-top: 20px;
     margin-left: 200px;
+    border: 2px solid black;
 }
 
 .reviewinview {
@@ -347,13 +348,32 @@
    
 }
 
+.reviewsubtitle {
+    color: white;
+    font-size: 25px;
+    padding-top: 50px;
+    text-align: center;
+}
+
 .button-view {
     background-color: #f62681;
     color: white;
     border-radius: 2px;
     margin-top: 70px;
-    margin-left: 120px;
+    margin-left: 115px;
+    float: 0;
+    width: 150px;
 }
+
+.button-view:hover {
+    background-color: #f62681;
+    color: white;
+    border-radius: 2px;
+    margin-top: 70px;
+    margin-left: 90px;
+    float: 0;
+}
+
 
 
 /* allseries.html */
