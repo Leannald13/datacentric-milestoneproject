@@ -3,48 +3,48 @@
 
 
     <div class="addseriesbackground">
-        <div class="row smallbox">
+        <div class="row minibox2">
     <form action="{{url_for('insert_boxset')}}" method="POST" class="col s12">
         <h3 class="addseriesheading">Share your favourite boxset with us!</h3>
           <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix addseriesicon">insert_photo</i>  
                 <img >               
-                <label for="boxset_image" id="addseriesimage">Upload the Image link</label>
+                <label style="color:#fff;" for="boxset_image" id="addseriesimage">Upload the Image link</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix addseriesicon">assignment</i>
-                <input id="boxset_title" name="boxset_title" type="text" class="validate" required>
-                <label for="boxset_title" id="addseriestitle">What's the name of the TV Series?</label>
+                <textarea style="color:#fff;" name="boxset_title" type="text" id="boxset_title" class="materialize-textarea" required></textarea>
+                <label for="boxset_title" id="addseriestitle">What's the title?</label>
             </div>
         </div>
         <div class="row">  
             <div class="input-field col s12">
                <i class="material-icons prefix addseriesicon">assignment</i>
-                <input id="boxset_seasons" name="boxset_seasons" type="text" class="materialize-textarea" required>
+                 <textarea style="color:#fff;" id="boxset_seasons" name="boxset_seasons" type="text" class="materialize-textarea" required></textarea>
                 <label for="boxset_seasons" id="addseriesseasons">How many seasons?</label> 
             </div>
         </div>
         <div class="row">  
             <div class="input-field col s12">
                 <i class="material-icons prefix addseriesicon">people</i>
-                <textarea id="boxset_starring" name="boxset_starring" type="text" class="materialize-textarea" required></textarea>
+                <textarea style="color:#fff;" id="boxset_starring" name="boxset_starring" type="text" class="materialize-textarea" required></textarea>
                 <label for="boxset_starring" id="addseriesstarring">Who are the actors?</label>
             </div>
         </div>
         <div class="row">  
             <div class="input-field col s12">
                 <i class="material-icons prefix addseriesicon">star</i>
-                <input id="boxset_rating" name="boxset_rating" type="text"  class="materialize-textarea" required>
+                <textarea style="color:#fff;" id="boxset_rating" name="boxset_rating" type="text" class="materialize-textarea" required></textarea>
                 <label for="boxset_rating" id="addseriesrating">How would you rate it out of 10?</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix addseriesicon">rate_review</i>
-                <textarea name="boxset_summary" id="boxset_summary" class=" materialize-textarea" required></textarea>
+                <textarea style="color:#fff;" id="boxset_summary" name="boxset_summary" type="text" class="materialize-textarea" required></textarea>
                 <label for="boxset_summary" id="addseriessummary">Tell us more about it...</label>
             </div>
         </div>
