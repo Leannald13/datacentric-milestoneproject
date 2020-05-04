@@ -291,9 +291,20 @@
 
 .viewseriesbackground {
     width: 100%;
-    height: 100%;
+    height: inherit;
     background-color: black;
+    padding-top: 130px;
     
+}
+
+.minibox3 {
+    width: 70%;
+    height: 1600px;
+    background-color: #1a1110;
+    border: 6px solid #f62681;
+    box-shadow: 12px 12px 12px #f62681;
+    margin-left: 200px;
+    padding-top: 40px;
 }
 
 .viewtextheading {
@@ -308,27 +319,42 @@
     text-align: center;
     font-family: 'Barlow', sans-serif;
     font-size: 20px;
-    margin-left: 150px;
-  
+     
+}
+
+.viewtextsummary {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
 }
 
 .viewtextimage {
     width: 500px;
     height: 400px;
     text-align: center;
-    margin-left: 190px;
     margin-top: 20px;
+    margin-left: 200px;
 }
 
-.viewseriesbox {
-    width: 70%;
-    height: inherit;
-    background-color: #1a1110;
-    border: 6px solid #10aea6;
-    box-shadow: 12px 12px 12px #10aea6;
-    margin-left: 200px;
-    padding-top: 40px;
+.reviewinview {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 430px;
+   
 }
+
+.button-view {
+    background-color: #f62681;
+    color: white;
+    border-radius: 2px;
+    margin-top: 70px;
+    margin-left: 120px;
+}
+
 
 /* allseries.html */
 

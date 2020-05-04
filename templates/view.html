@@ -2,48 +2,49 @@
 {% block content %}
 
 
-
-
 <div class="viewseriesbackground">
-	<div class="viewseriesbox">
+	<div class="minibox3">
 		<div class="row">
 			<h3 class="viewtextheading">{{cards.boxset_title}}</h3>
 		</div>
 		<div class="row">
-			<div class="col s6 heading">
+			<div class="col s12 heading">
 				<img class="viewtextimage" src="{{cards.boxset_image_url}}"><br>
 			</div>    
 		</div>
 		<div class="row">
-			<div class="col s6 heading">
+			<div class="col s12 heading">
 				<p class="viewtext">{{cards.boxset_starring}}</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col s6 heading">
+			<div class="col s12 heading">
                 <p class="viewtext">{{cards.boxset_seasons}} Seasons</p>
 				<p class="viewtext">Our Rating: {{cards.boxset_rating}}</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col s6 heading">
-				<p class="viewtext">{{cards.boxset_summary}}</p>
+			<div class="col s12 heading">
+				<p class="viewtextsummary">{{cards.boxset_summary}}</p>
 			</div>
 		</div>
         <div class="row">
-            <div class="col s6 heading">
+            <div class="col s12 heading">
                 {% for review in cards.boxset_reviews %}
-                    <span>{{review.review_rating}}</span><br> 
-                    <span>{{review.review_message}}</span><br>
+                    <span class="reviewinview">{{review.review_rating}}</span><br> 
+                    <span class="reviewinview">{{review.review_message}}</span><br>
 
                 {% endfor %}
             </div>
         </div>
-
-		<a href="{{url_for('add_review', boxset_id=cards._id)}}" class="waves-effect waves-light btn">Add a review</a>
-		<a href="{{url_for('edit_boxset', boxset_id=cards._id)}}" class="waves-effect waves-light btn">Edit Boxset</a>
-        <a href="{{url_for('delete_boxset', cards_id=cards._id)}}" class="waves-effect waves-light btn">Delete Boxset</a>
+        <div class="row">
+        <div class="col s12 heading">
+		<a href="{{url_for('add_review', boxset_id=cards._id)}}" class="waves-effect waves-light btn button-view">Add a review</a>
+		<a href="{{url_for('edit_boxset', boxset_id=cards._id)}}" class="waves-effect waves-light btn button-view">Edit Boxset</a>
+        <a href="{{url_for('delete_boxset', cards_id=cards._id)}}" class="waves-effect waves-light btn button-view">Delete Boxset</a>
 	</div>
+    </div>
+    </div>
 </div>
 
 
