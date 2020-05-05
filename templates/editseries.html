@@ -2,20 +2,19 @@
 {% block content %}
 
 
-    <div class="addseriesbackground">
-        <div class="row smallbox">
+    <div class="editseriesbackground">
+        <div class="row minibox3">
     <form action="{{url_for('update_boxset', boxset_id=boxset._id)}}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <span class="material-icons">tv</span>
-                <label>Edit a Boxset</label>
+                <h3>Edit a Boxset</h3>
             </div>  
         </div>
           <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">insert_photo</i>
-                <input style="color:#fff;" id="boxset_image" name="boxset_image" type="text" value="{{boxset.boxset_image}}" class="validate" required>
-                <label for="boxset_image">Upload the Image link</label>
+                <input style="color:#fff;" id="boxset_image_url" name="boxset_image_url" type="text" value="{{boxset.boxset_image_url}}" class="validate" required>
+                <label for="boxset_image_url">Upload the Image link</label>
             </div>
         </div>
         <div class="row">
@@ -34,8 +33,8 @@
         </div>
         <div class="row">  
             <div class="input-field col s12">
-                <span class="material-icons">people</span>
-                <textarea style="color:#fff;" name="boxset_starring" id="boxset_starring" class="materialize-textarea" required></textarea>
+                <i class="material-icons">people</i>
+                <input style="color:#fff;" name="boxset_starring" id="boxset_starring" type="text" value="{{boxset.boxset_starring}}"class="validate" required>
                 <label for="boxset_starring">Who are the actors?</label>
             </div>
         </div>
@@ -68,8 +67,5 @@
     </form>
 </div>
 </div>
-
-
-
-    
+   
 {% endblock %}

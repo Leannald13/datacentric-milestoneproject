@@ -215,6 +215,7 @@
     height: 900px;
     border: 6px solid;
     box-shadow: 12px 12px 12px #10aea6;
+    margin-left: 180px;
     
     
 }
@@ -433,8 +434,86 @@
 }
 /* editseries.html */
 
-.addreviewbackground {
-    width: 100%;
-    height: 500px;
+.editseriesbackground {
     background-color: black;
+    width: 100%;
+    height: 1300px;
+    margin: 0;
+    padding-top: 100px;
+}
+
+.minibox3 {
+    background-color: #1a1110;
+    width: 70%;
+    height: 1200px;
+    border: 6px solid;
+    box-shadow: 12px 12px 12px #10aea6;
+}
+
+.addseriesicon {
+    color: white;
+    font-size: 30px;
+    
+}
+
+
+#addseriesimage {
+    color: white;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    
+}
+
+#addseriestitle {
+    color: white;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    
+}
+
+#addseriesseasons {
+    color:  white;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+  
+}
+
+#addseriesstarring {
+    color: white;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+      
+}
+
+#addseriesrating {
+    color: white;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    
+}
+
+#addseriessummary {
+    color: white;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+   
+}
+
+.addseriesheading {
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.button-addseries {
+    float: left;
+    background-color: #10aea6;
+    border: none;
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 3px;
+    
 }
