@@ -26,14 +26,15 @@ def home_page():
 def add_boxset():
     return render_template("addseries.html", addboxset=mongo.db.addboxset.find())
 
+
 @app.route('/all_boxsets')
-def all_boxsets(offset=0, per_page=10):
+def all_boxsets(offset=0, per_page=9):
     page, per_page, offset= get_page_args(page_parameter='page')
     allseries = mongo.db.addboxset.find().count()
     pagination = Pagination(offset=offset, page=page, per_page=per_page, allseries=allseries, css_framework='materialize')
-    
-    return render_template('allseries.html', page=page, 
-                            per_page=per_page, pagination=pagination)
+    return render_template('allseries.html', addboxset=mongo.db.addboxset.find(), page=page, 
+                            per_page=per_page, pagination=pagination )
+
     
 @app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
@@ -83,7 +84,6 @@ def view_boxset(cards_id):
     addboxset = mongo.db.addboxset
     cards = addboxset.find_one({"_id": ObjectId(cards_id)})
     return render_template('view.html', cards=cards)
-
 
 if __name__ == "__main__":
         app.run(host=os.environ.get("IP", "0.0.0.0"),
