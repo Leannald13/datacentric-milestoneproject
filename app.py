@@ -6,8 +6,11 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.exceptions import HTTPException
+from flask_paginate import Pagination,  get_page_args
+
 
 app = Flask(__name__)
+
 
 app.config["MONGO_DBNAME"] = 'boxsetReviews'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@datacentriccluster-snqmw.mongodb.net/boxsetReviews?retryWrites=true&w=majority'
@@ -24,10 +27,14 @@ def add_boxset():
     return render_template("addseries.html", addboxset=mongo.db.addboxset.find())
 
 @app.route('/all_boxsets')
-def all_boxsets():
-    return render_template("allseries.html", addboxset=mongo.db.addboxset.find())
-
-
+def all_boxsets(offset=0, per_page=10):
+    page, per_page, offset= get_page_args(page_parameter='page')
+    allseries = mongo.db.addboxset.find().count()
+    pagination = Pagination(offset=offset, page=page, per_page=per_page, allseries=allseries, css_framework='materialize')
+    
+    return render_template('allseries.html', page=page, 
+                            per_page=per_page, pagination=pagination)
+    
 @app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
     addboxset = mongo.db.addboxset

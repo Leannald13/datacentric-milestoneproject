@@ -18,17 +18,20 @@
 <a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn">Read More</a>
       </ul>
       
-
-
 {%endfor%}
 
-<div class="clearfix">
-
-  <a class="waves-effect waves-light btn float-left" href=""> &larr; Previous Page</a>
-  <a class="waves-effect waves-light btn float-right" href="">Next Page &rarr;</a>
+<div class="container">
+ {{ pagination.links }}
+  <ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    <li class="active"><a href="#!">1</a></li>
+    <li class="waves-effect"><a href="#!">2</a></li>
+    <li class="waves-effect"><a href="#!">3</a></li>
+    <li class="waves-effect"><a href="#!">4</a></li>
+    <li class="waves-effect"><a href="#!">5</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+   {{ pagination.links }}
   </div>
-
-
-
-
+            
 {% endblock %}
