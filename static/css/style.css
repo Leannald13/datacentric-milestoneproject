@@ -289,20 +289,22 @@
 
 .viewseriesbackground {
     width: 100%;
-    height: inherit;
+    height: 100%;
     background-color: black;
-    padding-top: 130px;
+    padding-top: 110px;
+    padding-bottom: 100px;
     
 }
 
 .minibox3 {
     width: 70%;
-    height: 1600px;
+    height: 1300px;
     background-color: #1a1110;
-    border: 6px solid #f62681;
-    box-shadow: 12px 12px 12px #f62681;
+    border: 6px solid #f62681 !important;
+    box-shadow: 12px 12px 12px #f62681 !important;
     margin-left: 200px;
     padding-top: 40px;
+    
 }
 
 .viewtextheading {
@@ -357,8 +359,7 @@
     background-color: #f62681;
     color: white;
     border-radius: 2px;
-    margin-top: 70px;
-    margin-left: 115gpx;
+    margin-left: 200px;
     float: 0;
     width: 150px;
     font-family: 'Barlow', sans-serif;
@@ -368,9 +369,9 @@
     background-color: #f62681;
     color: white;
     border-radius: 2px;
-    margin-top: 70px;
-    margin-left: 90px;
+    margin-left: 200px;
     float: 0;
+    width: 150px;
     font-family: 'Barlow', sans-serif;
 }
 
@@ -429,6 +430,19 @@
   font-size: 25px;
   font-family: 'Barlow', sans-serif;
 }
+
+.button-allseries {
+    background-color: #f62681;
+    border-radius: 2px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.button-allseries:hover {
+    background-color: #f62681;
+    border-radius: 2px;
+    font-family: 'Barlow', sans-serif;
+}
+
 /* editseries.html */
 
 .editseriesbackground {
@@ -443,61 +457,61 @@
     background-color: #1a1110;
     width: 70%;
     height: 1200px;
-    border: 6px solid;
+    border: 6px solid #10aea6;
     box-shadow: 12px 12px 12px #10aea6;
     
 }
 
-.addseriesicon {
+.editseriesicon {
     color: white;
     font-size: 30px;
     
 }
 
 
-#addseriesimage {
+#editimage {
     color: white;
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
     
 }
 
-#addseriestitle {
+#edittitle {
     color: white;
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
     
 }
 
-#addseriesseasons {
+#editseasons {
     color:  white;
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
   
 }
 
-#addseriesstarring {
+#editactors {
     color: white;
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
       
 }
 
-#addseriesrating {
+#editrating {
     color: white;
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
     
 }
 
-#addseriessummary {
+#editsummary {
     color: white;
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
    
 }
 
-.addseriesheading {
+.editseriesheading {
     color: white;
     text-align: center;
     padding-bottom: 20px;
@@ -505,7 +519,7 @@
     font-family: 'Barlow', sans-serif;
 }
 
-.button-addseries {
+.button-editseries {
     float: left;
     background-color: #10aea6;
     border: none;

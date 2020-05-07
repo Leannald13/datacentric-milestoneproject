@@ -2,7 +2,7 @@
 import os
 import math
 from flask import Flask, render_template, redirect, request, url_for, session
-from flask_pymongo import PyMongo 
+from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.exceptions import HTTPException
@@ -26,14 +26,20 @@ def home_page():
 def add_boxset():
     return render_template("addseries.html", addboxset=mongo.db.addboxset.find())
 
-
 @app.route('/all_boxsets')
 def all_boxsets(offset=0, per_page=9):
-    page, per_page, offset= get_page_args(page_parameter='page')
-    allseries = mongo.db.addboxset.find().count()
-    pagination = Pagination(offset=offset, page=page, per_page=per_page, allseries=allseries, css_framework='materialize')
-    return render_template('allseries.html', addboxset=mongo.db.addboxset.find(), page=page, 
-                            per_page=per_page, pagination=pagination )
+    page, per_page, offset = get_page_args(page_parameter='page')
+    total = mongo.db.addboxset.count()
+    allboxsets = mongo.db.addboxset.find().sort('boxset_title', pymongo.ASCENDING)
+    pagination = Pagination(offset=offset, page=page, per_page=per_page, total=total, css_framework='materialize')
+    boxsets_per_page = 9
+    num_pages = boxsets_per_page  
+    return render_template('allseries.html', addboxset=mongo.db.addboxset.find().sort('boxset_title', pymongo.ASCENDING), 
+    page=page, per_page=per_page, pagination=pagination, allboxsets=allboxsets,
+    boxsets_per_page=boxsets_per_page, num_pages=num_pages)
+
+
+    
 
     
 @app.route('/insert_boxset', methods=['POST'])
