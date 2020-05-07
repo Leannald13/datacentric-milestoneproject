@@ -465,50 +465,63 @@
 .editseriesicon {
     color: white;
     font-size: 30px;
+    padding-left: 20px;
     
 }
-
 
 #editimage {
     color: white;
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
+    padding-left: 20px;
+
     
 }
 
 #edittitle {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Barlow', sans-serif;
+    padding-left: 20px;
     
 }
 
 #editseasons {
     color:  white;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Barlow', sans-serif;
+    padding-left: 20px;
+
   
 }
 
 #editactors {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Barlow', sans-serif;
+    padding-left: 20px;
+
       
 }
 
 #editrating {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Barlow', sans-serif;
+    padding-left: 20px;
+
     
 }
 
 #editsummary {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Barlow', sans-serif;
-   
+    padding-left: 20px;
+}
+
+.validate {
+    padding-left: 20px;
 }
 
 .editseriesheading {
@@ -531,8 +544,8 @@
     font-family: 'Barlow', sans-serif;
  
 }
-    
 
+    
 .pagination-page-info {
     padding: .6em;
     padding-left: 0;
