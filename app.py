@@ -1,6 +1,5 @@
 
 import os
-import math
 from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
@@ -26,6 +25,10 @@ def home_page():
 def add_boxset():
     return render_template("addseries.html", addboxset=mongo.db.addboxset.find())
 
+@app.route('/add_review') 
+def add_review():
+    return render_template("addseriesreview.html", userreviews=mongo.db.userreviews.find())
+
 @app.route('/all_boxsets')
 def all_boxsets(offset=0, per_page=9):
     page, per_page, offset = get_page_args(page_parameter='page')
@@ -39,9 +42,6 @@ def all_boxsets(offset=0, per_page=9):
     boxsets_per_page=boxsets_per_page, num_pages=num_pages)
 
 
-    
-
-    
 @app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
     addboxset = mongo.db.addboxset
@@ -56,6 +56,18 @@ def insert_boxset():
     addboxset.insert_one(boxset)  
     return redirect(url_for('all_boxsets'))
 
+
+@app.route('/insert_review', methods=["GET", "POST"])
+def insert_review():
+    userreviews = mongo.db.userreviews
+    review = {
+        "review_rating": request.form.get("review_rating"),
+        "review_message": request.form.get("review_message"),
+    }
+    userreviews.insert_one(review)
+    return redirect(url_for('add_review'))
+
+    
 @app.route('/edit_boxset/<boxset_id>')
 def edit_boxset(boxset_id):
     boxset = mongo.db.addboxset.find_one({"_id": ObjectId(boxset_id)})
@@ -90,6 +102,8 @@ def view_boxset(cards_id):
     addboxset = mongo.db.addboxset
     cards = addboxset.find_one({"_id": ObjectId(cards_id)})
     return render_template('view.html', cards=cards)
+
+
 
 if __name__ == "__main__":
         app.run(host=os.environ.get("IP", "0.0.0.0"),
