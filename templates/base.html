@@ -13,7 +13,7 @@
     <header> 
     <nav class="panel">
     <div class="nav-wrapper main-heading">
-      <a href="#" class="main-title">Couch Potato</a><span class="material-icons navtv">live_tv</span>
+      <a href="#" class="main-title">Couch Potato</a><span class="material-icons navtv">live_tv</span>       
       <ul id="nav-mobile" class="right hide-on-med-and-down">
          <li><a href="{{url_for('home_page')}}" class="main-subtitle button hvr-hang navbuttons" >Home</a></li>
         <li><a href="{{url_for('all_boxsets')}}" class="main-subtitle button hvr-hang">All Boxsets</a></li>
@@ -22,6 +22,11 @@
     </div>
   </nav>
 </header>
+<div class="row socialmediabackground">
+       <span class="material-icons socialmediaicon">live_tv</span><a target="_blank" href="https://en-gb.facebook.com/"><span class="socialmediafb">Facebook</span></a>
+       <span class="material-icons socialmediaicon">live_tv</span> <a target="_blank" href="https://www.instagram.com/"><span class="socialmediainsta">Instagram</span></a>
+       <span class="material-icons socialmediaicon">live_tv</span> <a target="_blank" href="https://twitter.com/login?lang=en-gb"><span class="socialmediatwit">Twitter</span></a>
+</div>
 
     {% block content %}
     {% endblock %}

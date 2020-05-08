@@ -41,7 +41,36 @@
     padding-top: 10px;
 }
 
+.socialmediabackground {
+    background-color: #FFDC40;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+}
 
+.socialmediafb {
+    color: black;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.socialmediainsta {
+    color: black;
+    font-size: 18px;
+}
+
+.socialmediatwit {
+    color: black;
+    font-size: 18px;
+   
+}
+
+.socialmediaicon {
+    color: black;
+    font-size: 18px;
+    
+    
+}
 /* home.html */
 
 @media (min-width: 768px) {
