@@ -25,9 +25,9 @@ def home_page():
 def add_boxset():
     return render_template("addseries.html", addboxset=mongo.db.addboxset.find())
 
-@app.route('/add_review') 
-def add_review():
-    return render_template("addseriesreview.html", userreviews=mongo.db.userreviews.find())
+@app.route('/add_review/<boxset_id>') 
+def add_review(boxset_id):
+    return render_template("addseriesreview.html", userreviews=mongo.db.userreviews.find(), boxset_id=boxset_id)
 
 @app.route('/all_boxsets')
 def all_boxsets(offset=0, per_page=9):
@@ -37,7 +37,7 @@ def all_boxsets(offset=0, per_page=9):
     pagination = Pagination(offset=offset, page=page, per_page=per_page, total=total, css_framework='materialize')
     boxsets_per_page = 9
     num_pages = boxsets_per_page  
-    return render_template('allseries.html', addboxset=mongo.db.addboxset.find().sort('boxset_title', pymongo.ASCENDING), 
+    return render_template('allseries.html', addboxset=mongo.db.addboxset.find().skip(offset).limit(9).sort('boxset_title', pymongo.ASCENDING), 
     page=page, per_page=per_page, pagination=pagination, allboxsets=allboxsets,
     boxsets_per_page=boxsets_per_page, num_pages=num_pages)
 
@@ -57,15 +57,16 @@ def insert_boxset():
     return redirect(url_for('all_boxsets'))
 
 
-@app.route('/insert_review', methods=["GET", "POST"])
-def insert_review():
+@app.route('/insert_review/<boxset_id>', methods=["GET", "POST"])
+def insert_review(boxset_id):
     userreviews = mongo.db.userreviews
     review = {
         "review_rating": request.form.get("review_rating"),
         "review_message": request.form.get("review_message"),
+        "boxset_id": boxset_id
     }
     userreviews.insert_one(review)
-    return redirect(url_for('add_review'))
+    return redirect(url_for('view_boxset', cards_id=boxset_id))
 
     
 @app.route('/edit_boxset/<boxset_id>')
@@ -101,7 +102,9 @@ def update_boxset(boxset_id):
 def view_boxset(cards_id):
     addboxset = mongo.db.addboxset
     cards = addboxset.find_one({"_id": ObjectId(cards_id)})
-    return render_template('view.html', cards=cards)
+    reviews = mongo.db.userreviews.find({"boxset_id": cards_id})
+    print(reviews)
+    return render_template('view.html', cards=cards, reviews=reviews)
 
 
 
