@@ -1,9 +1,10 @@
 {% extends 'base.html' %}   
 {% block content %}
 
-<div class="search-bar">
-<span class="material-icons">search<input type="text" id="myInput" name="myInput" placeholder="Search Boxset"></span>
-
+<div class="search_all">
+<input name="search_bar" type="search" id="search_bar" placeholder="Search Boxset" aria-label="Search">`  
+</div>
+{{search}}
 
 {% for cards in addboxset %} 
 

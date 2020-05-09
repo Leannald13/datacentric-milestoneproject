@@ -15,13 +15,7 @@
 		
 		<div class="row">
 			<div class="col s12 heading">
-				<p class="viewtext">{{cards.boxset_starring}}</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s12 heading">
-                <p class="viewtext">{{cards.boxset_seasons}} Seasons</p>
-				<p class="viewtext">Our Rating: {{cards.boxset_rating}}</p>
+				<p class="viewtext">{{cards.boxset_starring}} <br> {{cards.boxset_seasons}} Seasons <br> Our Rating: {{cards.boxset_rating}}</p>
 			</div>
 		</div>
 		<div class="row">
@@ -29,9 +23,10 @@
 				<p class="viewtextsummary">{{cards.boxset_summary}}</p>
 			</div>
             {% for review in reviews %} 
+            <h6 class="reviewuser">User Reviews</h6>
             <div class="row">
 			<div class="col s12 heading">
-				<p class="viewtextsummary">Rating: {{review.review_rating}} <br> Review: {{review.review_message}}</p>    
+				<p class="reviewonview">Rating: {{review.review_rating}} <br> Review: {{review.review_message}}</p>    
 			</div>
             {%endfor%}
         <div class="row">

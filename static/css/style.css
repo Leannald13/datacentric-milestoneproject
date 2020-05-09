@@ -482,7 +482,20 @@
     font-family: 'Barlow', sans-serif;
 }
 
+.reviewonview {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
 
+.reviewuser {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 50px;
+    
+}
 
 /* allseries.html */
 

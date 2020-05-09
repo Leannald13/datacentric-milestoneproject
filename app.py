@@ -1,18 +1,18 @@
 
 import os
+import flask.config
 from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
-from werkzeug.security import generate_password_hash, check_password_hash
-from werkzeug.exceptions import HTTPException
 from flask_paginate import Pagination,  get_page_args
 
 
 app = Flask(__name__)
 
 
-app.config["MONGO_DBNAME"] = 'boxsetReviews'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@datacentriccluster-snqmw.mongodb.net/boxsetReviews?retryWrites=true&w=majority'
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("SECRET_KEY")
+
 
 mongo = PyMongo(app)
     
@@ -107,8 +107,17 @@ def view_boxset(cards_id):
     return render_template('view.html', cards=cards, reviews=reviews)
 
 
+@app.route('/search', methods=['POST'])
+def search():   
+    search_bar = request.form.get('search_bar')
+    addboxset = list(mongo.db.addboxset.find({"boxset_title": {"$regex": f'.*{search_bar}.*'}}))
+    return render_template('allseries.html', addboxset=addboxset)
+
+
 
 if __name__ == "__main__":
+        app.MONGO_URI = "SECRET_KEY"
+        app.MONGO_DBNAME = "MONGO_DBNAME"
         app.run(host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),
         debug=True)
