@@ -366,7 +366,7 @@
 
 .button-addseries {
     float: left;
-    background-color: #10aea6;
+    background-color: #f62681;
     border: none;
     margin-left: 50px;
     margin-top: 60px;
@@ -377,7 +377,7 @@
 
 .button-addseries:hover {
     float: left;
-    background-color: #10aea6;
+    background-color: #f62681;
     border: none;
     margin-left: 50px;
     margin-top: 60px;
@@ -676,7 +676,7 @@
 
 .button-editseries {
     float: left;
-    background-color: #f62681;
+    background-color: #10aea6;
     border: none;
     width: 150px !important;
     margin-left: 55px;
@@ -689,7 +689,7 @@
 
 .button-editseries:hover {
     float: left;
-    background-color: #f62681;
+    background-color: #10aea6;
     border: none;
     width: 150px !important;
     margin-left: 55px;
