@@ -5,13 +5,16 @@ from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 from flask_paginate import Pagination,  get_page_args
+from os import path
+if path.exists("env.py"):
+  import env 
 
 
 app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("SECRET_KEY")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 
 mongo = PyMongo(app)
@@ -116,7 +119,7 @@ def search():
 
 
 if __name__ == "__main__":
-        app.MONGO_URI = "SECRET_KEY"
+        app.MONGO_URI = "MONGO_URI"
         app.MONGO_DBNAME = "MONGO_DBNAME"
         app.run(host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),
