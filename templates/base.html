@@ -22,11 +22,30 @@
     </div>
   </nav>
 </header>
+
+<!--
+<div class="viewformob">
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background-mobilenav"></div>
+      <li><a href="{{url_for('home_page')}}">Home</a></li>
+        <li><a href="{{url_for('all_boxsets')}}">All Boxsets</a></li>
+        <li><a href="{{url_for('add_boxset')}}">Add a Boxsets</a></li>
+    </div>
+    </li>
+  </ul>
+  <div class="sidenav-background">
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a><ul id="slide-out" class="sidenav">      
+  </ul>
+  </div>
+</div>
+
 <div class="row socialmediabackground">
        <span class="material-icons socialmediaicon">live_tv</span><a target="_blank" href="https://en-gb.facebook.com/"><span class="socialmediafb">Facebook</span></a>
        <span class="material-icons socialmediaicon">live_tv</span> <a target="_blank" href="https://www.instagram.com/"><span class="socialmediainsta">Instagram</span></a>
        <span class="material-icons socialmediaicon">live_tv</span> <a target="_blank" href="https://twitter.com/login?lang=en-gb"><span class="socialmediatwit">Twitter</span></a>
 </div>
+-->
 
     {% block content %}
     {% endblock %}
@@ -36,8 +55,17 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.dropdown-trigger').dropdown();
+            $('select').formSelect();
+
+        }); 
+    </script>
     <script src="{{url_for('static', filename='js/carousel.js')}}"></script>
     <script src="{{url_for('static', filename='js/searchbox.js')}}"></script>
+   
 
 </body>
 
