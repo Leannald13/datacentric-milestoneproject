@@ -540,6 +540,9 @@
     width: 380px;
     height: 250px;
     text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     
 }
 
@@ -547,12 +550,14 @@
     font-size: 30px !important;
     color: white;
     font-family: 'Barlow', sans-serif;
+    text-align: center;
 }
 
 .allseriestext {
     font-size: 18px;
     color: white;
     font-family: 'Barlow', sans-serif;
+    text-align: center;
 }
 
 .search-bar {
@@ -572,12 +577,14 @@
     background-color: #f62681;
     border-radius: 2px;
     font-family: 'Barlow', sans-serif;
+    margin-left: 130px;
 }
 
 .button-allseries:hover {
     background-color: #f62681;
     border-radius: 2px;
     font-family: 'Barlow', sans-serif;
+    margin-left: 130px;
 }
 
 /* editseries.html */

@@ -117,10 +117,7 @@ def search():
     return render_template('allseries.html', addboxset=addboxset)
 
 
-
 if __name__ == "__main__":
-        app.MONGO_URI = "MONGO_URI"
-        app.MONGO_DBNAME = "MONGO_DBNAME"
         app.run(host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),
         debug=True)
