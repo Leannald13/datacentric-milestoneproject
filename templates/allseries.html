@@ -11,13 +11,14 @@
 {% for cards in addboxset %} 
 
   <div id="myList" class="row largebox4"> 
-      <ul id="all" class="col s6 minibox1">  
-      <li><img class="allseriesimage" src="{{cards.boxset_image_url}}"></li><br>
-      <li class="allseriestitles">{{cards.boxset_title}}</li><br>
-      <li class="allseriestext"> Starring: {{cards.boxset_starring}}</li><br>
-      <li class="allseriestext"> Our Rating: {{cards.boxset_rating}}</li><br> 
-      <a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn hvr-hang button-allseries">Read More</a>
+      <ul class="col s6 minibox1">  
+      <li><img class="allseriesimage" alt="boxsetpic" src="{{cards.boxset_image_url}}"></li>
+      <li class="allseriestitles">{{cards.boxset_title}}</li>
+      <li class="allseriestext"> Starring: {{cards.boxset_starring}}</li>
+      <li class="allseriestext"> Our Rating: {{cards.boxset_rating}}</li>
+      <li><a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn hvr-hang button-allseries">Read More</a><li>
       </ul>  
+     
       
 {%endfor%}
  

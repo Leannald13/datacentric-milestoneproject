@@ -6,7 +6,7 @@
 	<div class="minibox3">
     <div class="row">
 			<div class="col s12 heading">
-				<img class="viewtextimage" src="{{cards.boxset_image_url}}"><br>
+				<img class="viewtextimage" alt="boxsetpic" src="{{cards.boxset_image_url}}"><br>
 			</div>    
 		</div>
 		<div class="row">
@@ -21,6 +21,7 @@
 			<div class="col s12 heading">
 				<p class="viewtextsummary">{{cards.boxset_summary}}</p>
 			</div>
+            </div>
             {% for review in reviews %} <!--reviews from addseriesreview.html are redirected to view.html-->
             <h6 class="reviewuser">User Review</h6>
             <div class="row">
@@ -35,6 +36,8 @@
         <a href="{{url_for('delete_boxset', cards_id=cards._id)}}" class="waves-effect waves-light btn button-view hvr-hang">Delete Boxset</a>
 	</div>
     </div>   
+</div>
+</div>
 </div>
 
 

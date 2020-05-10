@@ -2,19 +2,18 @@
 {% block content %}
 
 <div class="westworldbox">
-<img src="static/images/main.jpg" alt="westworld" class="westworld">
+    <img src="static/images/main.jpg" alt="westworld" class="westworld">
 </div>
 <div class="carousel carousel-slider"> <!--image carousel see carousel.js for code-->
-    <a class="carousel-item" href="#one!"><img src="{{ url_for('static', filename='images/slide1.jpg') }}"></a>
-    <a class="carousel-item" href="#two!"><img src="{{ url_for('static', filename='images/slide2.jpg') }}"></a>
-    <a class="carousel-item" href="#three!"><img src="{{ url_for('static', filename='images/slide3.jpg') }}"></a>
-    <a class="carousel-item" href="#four!"><img src="{{ url_for('static', filename='images/slide4.jpg') }}"></a>
-  </div>
-
+    <a class="carousel-item" href="#one!"><img alt="slide1" src="{{ url_for('static', filename='images/slide1.jpg') }}"></a>
+    <a class="carousel-item" href="#two!"><img alt="slide2" src="{{ url_for('static', filename='images/slide2.jpg') }}"></a>
+    <a class="carousel-item" href="#three!"><img alt="slide3" src="{{ url_for('static', filename='images/slide3.jpg') }}"></a>
+    <a class="carousel-item" href="#four!"><img alt="slide4" src="{{ url_for('static', filename='images/slide4.jpg') }}"></a>
+</div>
     <div class="row toppicksbox">
       <div class="col s5 box1">
       <h5 class="list-title">Our All Time Favourites!</h5>
-   <ul class="list body">
+      <ul class="list body">
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>Westworld 9.2</li>
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>Game of Thrones 9.0</li>
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>Friends 8.9</li>
@@ -25,8 +24,8 @@
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>This Is Us 8.2</li>
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>Parks and Recreation 8.0</li>
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>Arrested Development 7.9</li>
-    </ul>
-      </div>
+      </ul>
+    </div>
       
       <div class="col s5 box2">
       <h5 class="list-title">Your Top Picks!</h5>
@@ -41,7 +40,7 @@
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>This Is Us 8.5</li>
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>Big Little Lies 8.4</li>
             <li class="list-content"><span class="material-icons homeicon">live_tv</span>Unbelievable 8.1</li>
-    </ul>
+        </ul>
       </div> 
     </div>
 
@@ -50,19 +49,17 @@
     {% for cards in addboxset %}
     {% if loop.index < 5 %} <!-- limits home page to 4 boxset cards-->
 
-    <div class="row largebox1">
+  <div class="row largebox1">
     <div class="col s2 minibox">  
-      <img class="miniboximage" src="{{cards.boxset_image_url}}"><br>
+      <img class="miniboximage" alt="boxsetimage" src="{{cards.boxset_image_url}}"><br>
       <p class="miniboxparagraph">New season out now!</p><span class="miniboxtitle">{{cards.boxset_title}}</span><br>
       <span class="material-icons ratingicon">grade</span><span class="miniboxrating">{{cards.boxset_rating}}</span><br>
       <a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn button-homepage button hvr-hang">Read More</a>
-      </div>
+    </div>
       
 
     {% endif %}
     {% endfor %} 
-
-    
 
 {% endblock %} 
 

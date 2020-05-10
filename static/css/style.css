@@ -385,7 +385,7 @@
 
 .viewtextimage {
     width: 90%;
-    block-size: 500px;
+    height: 500px;
     text-align: center;
     margin-top: 20px;
     margin-left: 60px;
@@ -413,7 +413,6 @@
     border-radius: 2px;
     margin-left: 110px;
     margin-top: 50px;
-    float: 0;
     width: 150px;
     font-family: 'Barlow', sans-serif;
 }
@@ -424,7 +423,6 @@
     border-radius: 2px;
     margin-left: 110px;
     margin-top: 50px;
-    float: 0;
     width: 150px;
     font-family: 'Barlow', sans-serif;
 }
@@ -479,6 +477,8 @@
     color: white;
     font-family: 'Barlow', sans-serif;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .allseriestext {
@@ -486,6 +486,8 @@
     color: white;
     font-family: 'Barlow', sans-serif;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #search_bar {
@@ -499,7 +501,7 @@
 .search_bar {
     background-color: black;
     text-align: center;
-    border: 1px solid, white;
+    border: 1px solid white;
     color: white;
     height: 30px;
     width: 100px;
@@ -693,7 +695,6 @@
     border-radius: 2px;
     margin-top: 30px;
     margin-left: 50px;
-    float: 0;
     width: 150px;
     font-family: 'Barlow', sans-serif;
 }
@@ -704,7 +705,6 @@
     border-radius: 2px;
     margin-top: 30px;
     margin-left: 50px;
-    float: 0;
     width: 150px;
     font-family: 'Barlow', sans-serif;
 }
