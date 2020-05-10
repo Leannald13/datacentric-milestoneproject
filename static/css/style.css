@@ -319,7 +319,7 @@
 .addseriesicon {
     color: white;
     font-size: 30px;
-    padding-right: 40px;   
+    margin-right: 70px;   
 }
 
 #addseriesimage {
@@ -372,7 +372,7 @@
 
 .button-addseries {
     float: left;
-    background-color: #f62681;
+    background-color: #10aea6;
     border: none;
     margin-left: 50px;
     margin-top: 60px;
@@ -383,7 +383,7 @@
 
 .button-addseries:hover {
     float: left;
-    background-color: #f62681;
+    background-color: #10aea6;
     border: none;
     margin-left: 50px;
     margin-top: 60px;
