@@ -4,14 +4,12 @@
 <div class="westworldbox">
 <img src="static/images/main.jpg" alt="westworld" class="westworld">
 </div>
-
-<div class="carousel carousel-slider">
+<div class="carousel carousel-slider"> <!--image carousel see carousel.js for code-->
     <a class="carousel-item thecarousel" href="#one!"><img src="{{ url_for('static', filename='images/slide1.jpg') }}"></a>
     <a class="carousel-item thecarousel" href="#two!"><img src="{{ url_for('static', filename='images/slide2.jpg') }}"></a>
     <a class="carousel-item thecarousel" href="#three!"><img src="{{ url_for('static', filename='images/slide3.jpg') }}"></a>
     <a class="carousel-item thecarousel" href="#four!"><img src="{{ url_for('static', filename='images/slide4.jpg') }}"></a>
   </div>
-
 <div class="largeboxhome">
 <div class="box1 col-12 row">
 <div class="list-title">
@@ -52,7 +50,7 @@
 
     
     {% for cards in addboxset %}
-    {% if loop.index < 5 %}
+    {% if loop.index < 5 %} <!-- limits home page to 4 boxset cards-->
 
     <div class="row largebox1">
     <div class="col s2 minibox">  

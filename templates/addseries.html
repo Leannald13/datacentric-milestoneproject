@@ -1,8 +1,7 @@
 
 {% extends 'base.html' %}   
 {% block content %}
-
-  
+ <!--addseries.html allows user to insert a boxset and is redirected to allseries.html-->
 <div class="row addseriesbackground ">
     <div class="minibox2">
             <form action="{{url_for('insert_boxset')}}" method="POST" class="col s12">
@@ -55,6 +54,5 @@
     </form>
 </div>
 </div>
-
 
 {% endblock %}

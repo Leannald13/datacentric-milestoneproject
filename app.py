@@ -4,7 +4,7 @@ import flask.config
 from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
-from flask_paginate import Pagination,  get_page_args
+from flask_paginate import Pagination, get_page_args
 from os import path
 if path.exists("env.py"):
   import env 
@@ -19,7 +19,7 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo = PyMongo(app)
     
-
+"""routes"""
 @app.route('/')
 def home_page():  
     return render_template("home.html", addboxset=mongo.db.addboxset.find())
@@ -32,6 +32,7 @@ def add_boxset():
 def add_review(boxset_id):
     return render_template("addseriesreview.html", userreviews=mongo.db.userreviews.find(), boxset_id=boxset_id)
 
+"""pagination"""
 @app.route('/all_boxsets')
 def all_boxsets(offset=0, per_page=9):
     page, per_page, offset = get_page_args(page_parameter='page')
@@ -97,7 +98,6 @@ def update_boxset(boxset_id):
     }   
     mongo.db.addboxset.update({"_id": ObjectId(boxset_id)}, boxset) 
     return redirect(url_for('view_boxset', cards_id=boxset_id))
-    # a GET request means we want to return the html page
     return render_template('allseries.html', boxset=boxset)
 
 
@@ -109,7 +109,7 @@ def view_boxset(cards_id):
     print(reviews)
     return render_template('view.html', cards=cards, reviews=reviews)
 
-
+""" search function for search input on allseries.html"""
 @app.route('/search', methods=['GET'])
 def search():
     search_bar = request.args.get('search_bar')

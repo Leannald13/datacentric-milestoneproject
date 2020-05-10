@@ -1,31 +1,29 @@
 {% extends 'base.html' %}   
 {% block content %}
-
+<!-- search box to allow user to search any title-->
 <form action="{{url_for('search')}}" method="GET" class="col s12">
-<label for="search-boxset">Search Boxsets</label><br>
-<input name="search_bar" type="search" id="search_bar" placeholder="Search Boxset" value="search" aria-label="Search">
- <input type="submit" value="Submit">
+<div class="searchbarbackground">
+<input name="search_bar" type="search" id="search_bar" value="Search Boxset..." aria-label="Search">
+<input type="submit" class="search_bar" value="Submit">
+ </div>
 </form>
 {{search}}
 
 {% for cards in addboxset %} 
-
 
   <div id="myList" class="row largebox4"> 
       <ul id="all" class="col s6 minibox1">  
       <li><img class="allseriesimage" src="{{cards.boxset_image_url}}"></li><br>
       <li class="allseriestitles">{{cards.boxset_title}}</li><br>
       <li class="allseriestext"> Starring: {{cards.boxset_starring}}</li><br>
-      <li class="allseriestext"> Our Rating: {{cards.boxset_rating}}</li><br>
-     
-<a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn hvr-hang button-allseries">Read More</a>
-      </ul>
-      
+      <li class="allseriestext"> Our Rating: {{cards.boxset_rating}}</li><br> 
+      <a href="{{url_for('view_boxset', cards_id=cards._id)}}"  class="waves-effect waves-light btn hvr-hang button-allseries">Read More</a>
+      </ul>  
       
 {%endfor%}
  
- 
-{{ pagination.links }}
+ <!--Pagination. See all_boxsets function on app.py for code-->
+<div class="pagination">{{ pagination.links }}</div>
   
   
 {% endblock %}

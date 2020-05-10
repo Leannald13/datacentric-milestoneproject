@@ -1,7 +1,7 @@
 {% extends 'base.html' %}   
 {% block content %}
 
-
+    <!--editseries.html allows user to edit an existing boxset, and update. Redirects user to view.html-->
     <div class="editseriesbackground">
         <div class="row minibox5">
     <form action="{{url_for('update_boxset', boxset_id=boxset._id)}}" method="POST" class="col s12">

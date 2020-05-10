@@ -4,12 +4,11 @@
 
 
 {% for review in userreviews %} 
-  
+<!--user can add a review from view.html add review button. Review is inserted into view.html.-->
 <div class="row addseriesbackground ">
     <div class="minibox4">
             <form action="{{url_for('insert_review', boxset_id=boxset_id)}}" method="POST" class="col s12">
             <h3 class="addseriesheading">Add A Review</h3>
-          
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix addseriesicon">star</i>

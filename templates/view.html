@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
+<!--view.html allows the user to view full information on chosen boxset -->
 <div class="viewseriesbackground">
 	<div class="minibox3">
     <div class="row">
@@ -11,8 +11,7 @@
 		</div>
 		<div class="row">
 			<h3 class="viewtextheading">{{cards.boxset_title}}</h3>
-		</div>
-		
+		</div>	
 		<div class="row">
 			<div class="col s12 heading">
 				<p class="viewtext">{{cards.boxset_starring}} <br> {{cards.boxset_seasons}} Seasons <br> Our Rating: {{cards.boxset_rating}}</p>
@@ -22,8 +21,8 @@
 			<div class="col s12 heading">
 				<p class="viewtextsummary">{{cards.boxset_summary}}</p>
 			</div>
-            {% for review in reviews %} 
-            <h6 class="reviewuser">User Reviews</h6>
+            {% for review in reviews %} <!--reviews from addseriesreview.html are redirected to view.html-->
+            <h6 class="reviewuser">User Review</h6>
             <div class="row">
 			<div class="col s12 heading">
 				<p class="reviewonview">Rating: {{review.review_rating}} <br> Review: {{review.review_message}}</p>    
@@ -35,8 +34,7 @@
 		<a href="{{url_for('edit_boxset', boxset_id=cards._id)}}" class="waves-effect waves-light btn button-view hvr-hang">Edit Boxset</a>
         <a href="{{url_for('delete_boxset', cards_id=cards._id)}}" class="waves-effect waves-light btn button-view hvr-hang">Delete Boxset</a>
 	</div>
-    </div>
-    
+    </div>   
 </div>
 
 
