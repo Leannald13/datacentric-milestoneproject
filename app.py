@@ -45,7 +45,7 @@ def all_boxsets(offset=0, per_page=9):
     boxsets_per_page=boxsets_per_page, num_pages=num_pages)
 
 
-@app.route('/insert_boxset', methods=['POST'])
+@app.route('/insert_boxset', methods=['GET'])
 def insert_boxset():
     addboxset = mongo.db.addboxset
     boxset = {
@@ -110,11 +110,13 @@ def view_boxset(cards_id):
     return render_template('view.html', cards=cards, reviews=reviews)
 
 
-@app.route('/search', methods=['POST'])
-def search():   
-    search_bar = request.form.get('search_bar')
-    addboxset = list(mongo.db.addboxset.find({"boxset_title": {"$regex": f'.*{search_bar}.*'}}))
-    return render_template('allseries.html', addboxset=addboxset)
+@app.route('/search', methods=['GET'])
+def search():
+    search_bar = request.args.get('search_bar')
+    print(search_bar)
+    addboxset = list(mongo.db.addboxset.find({"boxset_title": {"$regex": f'(?i).*{search_bar}.*'}}))
+    print(addboxset)
+    return render_template('search.html', results=addboxset) 
 
 
 if __name__ == "__main__":

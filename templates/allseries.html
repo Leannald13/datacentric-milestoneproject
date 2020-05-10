@@ -1,9 +1,11 @@
 {% extends 'base.html' %}   
 {% block content %}
 
-<div class="search_all">
-<input name="search_bar" type="search" id="search_bar" placeholder="Search Boxset" aria-label="Search">`  
-</div>
+<form action="{{url_for('search')}}" method="GET" class="col s12">
+<label for="search-boxset">Search Boxsets</label><br>
+<input name="search_bar" type="search" id="search_bar" placeholder="Search Boxset" value="search" aria-label="Search">
+ <input type="submit" value="Submit">
+</form>
 {{search}}
 
 {% for cards in addboxset %} 
