@@ -5,30 +5,32 @@
 
 {% for review in userreviews %} 
 <!--user can add a review from view.html add review button. Review is inserted into view.html.-->
-<div class="row addseriesbackground ">
-    <div class="minibox4">
+
+<div class="addreviewbackground">
+    <div class="minibox7">
             <form action="{{url_for('insert_review', boxset_id=boxset_id)}}" method="POST" class="col s12">
             <h3 class="addseriesheading">Add A Review</h3>
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix addseriesicon">star</i>
+                <i class="material-icons prefix addreviewicon">star</i>
                 <textarea style="color:#fff;" name="review_rating" id="review_rating" class="materialize-textarea" value="{{review.review_rating}}" required></textarea>
-                <label for="icon_telephone" id="addratingreview">How would you rate it?</label>
+                <label for="icon_telephone" id="addrating">How would you rate it?</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix addseriesicon">rate_review</i>
+                <i class="material-icons prefix addreviewicon">rate_review</i>
                 <textarea style="color:#fff;" name="review_message" id="review.review_message" class="materialize-textarea" value= "{{review.review_message}}" required></textarea>
-                <label for="icon_telephone" id="addsummaryreview">Tell us more about it....</label>
+                <label for="icon_telephone" id="addreview">Tell us more about it....</label>
             </div>
         </div>
         <div class="row">
-            <button class="btn waves-effect waves-light hvr-hang button-addseries" type="submit" name="action">Add Review</button>
+            <button class="btn waves-effect waves-light hvr-hang button-addreview" type="submit" name="action">Add Review</button>
         </div>
     </form>
 </div>
 </div>
+
 
 {%endfor%}
 
