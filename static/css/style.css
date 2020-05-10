@@ -76,141 +76,91 @@
     font-size: 18px;
 }
 
-@media (max-width: 768px) {
-#slide-out {
-    background-color: #FFDC40;
- }
-}
-
-@media (max-width: 768px) {
-.sidenav-background {
-    background-color: #FFDC40;
-    width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-.viewformob {
-    background-color: #FFDC40;
-    }
-}
 
 /* home.html */
 
-@media (min-width: 768px) {
+
 .westworldbox {
     background-color: black;
     width: 100%;
     height: 260px;   
     }
-}
 
-@media (max-width: 767px) {
-.westworldbox {
-    background-color: black;
-    width: 100%;
-    height: 100px;  
-    }
-}
-
-@media (min-width: 768px) {
 .westworld {
     height: 150px;
-    width: 60%;
-    margin-left: 250px;
-    margin-top: 50px;
-      
+    width: 80%;
+    margin-left: 110px;
+    margin-top: 50px;  
     }
-}
 
-@media (max-width: 767px) {
-    .westworld {
-        height: 70px;
-        width: 70%;
-        margin-top: 20px;
-        margin-right: 100px !important;
-    }
-}
+
+
 /* home.html image carousel and top ratings lists */
 
-@media (min-width: 768px) {
+
+ @media (max-width: 678px) {
+.indicators {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+    height: 160px;
+    }
+ }
+
+ @media (min-width: 679px) {
+.indicators {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    }
+ }
+
+
 .carousel {
     height: 400px !important;
     width: 100%;
     }
-}
 
-@media (max-width: 767px) {
-.carousel {
-    height: 300px !important;
+
+
+.toppicksbox {
     width: 100%;
-    }
-}
-
-@media(min-width: 768px) {
-    a.carousel-item.thecarousel {
-        width: 400px;
-        height: 300px;
-    }
-}
-
-@media(min-width: 768px) {
-    ul.indicators {
-        margin: 0;
-        padding: 0;
-        padding-inline-start: 0;
-        box-sizing: border-box;
-    }
-}
-@media (min-width: 768px) {
-.largeboxhome {
-    box-sizing: border-box;
-    width: 100%;
-    height: 650px;
     background-color: black;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    }
+    height: 600px;
+    padding-left: 100px;
 }
 
-@media (max-width: 767px) {
-.largeboxhome {
-    box-sizing: border-box;
-    width: 100%;
-    height: 300px;
-    background-color: black;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    }
+.row {
+    margin-bottom: 0;
 }
 
-
-.box1 {
-    display: inline-block;
+.box1 { 
     background-color: #1a1110;
-    width: 400px;
-    height: 470px;
+    width: 40%;
+    height: 500px;
     box-shadow: 10px 12px 12px #10aea6;
     border: 1px solid #10aea6;
-    margin: 20px 360px 0 80px;
-    padding-left: 50px;
+    margin-right: 50px;
 }   
 
 
 .box2 {
-    display: inline-block;
     background-color: #1a1110;
-    width: 400px;
-    height: 470px;
+    width: 40%;
+    height: 500px;
     border: 1px solid #10aea6;
     box-shadow: 10px 12px 12px #10aea6;
-    padding-left: 100px;
-    
+    margin-right: 50px;
+   
     }
 
 .homeicon {
     color: white !important;
     padding-right: 15px;
+    text-align:  center;
 }
 
 .list-content {
@@ -218,6 +168,7 @@
     font-family: 'Barlow', sans-serif;
     font-size: 17px;
     padding: 2px 2px 2px 2px;
+    text-align: center;
     
 }
 
@@ -225,7 +176,9 @@
     color: white;
     font-family: 'Barlow', sans-serif;
     margin-left: 10px;
+    text-align: center;
 }
+
 
 .button-homepage {
     background-color: #f62681;
@@ -764,5 +717,3 @@
 
 
 /* search.html */
-
-
