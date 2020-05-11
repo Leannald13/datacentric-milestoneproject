@@ -139,5 +139,31 @@ Search Bar:
 
 ## Code Validators
 
+HTML - https://validator.w3.org/ 
+I ran each HTML template through the validators. Each page presented with a number of errors that related to
+the Jinja templating. I discussed this with the Tutors on the support tab who informed me that this is to be expected
+and I do not need to make any amendments to the code.
+
+CSS - https://jigsaw.w3.org/css-validator/ 
+I ran my style.css through the validator and I recieved no errors.
+
+Python - http://pep8online.com/ 
+I ran my app.py through the validator and I received 3 errors:
+- Lines were too login
+- White space  
+- Additional line space
+I fixed these errors and ran my code again which recieved no errors.
+
+## Testing devices
+
+- Desktop - passed
+- Mobile device - passed
+- Ipad - passed
+
+## Testing Browsers
+
+- Chrome - passed
+- Internet Explorer - passed
+
 
 
