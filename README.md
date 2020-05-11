@@ -150,7 +150,7 @@ I ran my style.css through the validator and I recieved no errors.
 
 Python - http://pep8online.com/ 
 I ran my app.py through the validator and I received 3 errors:
-- Lines were too login
+- Lines were too long
 - White space  
 - Additional line space
 I fixed these errors and ran my code again which recieved no errors.
@@ -187,9 +187,10 @@ To deploy this project to Heroku required the following steps:
 - I used Slack (data-centric dev channel) to assist with my pagination
 - I used the following code example to assist with pagination: https://github.com/DarilliGames/flaskpaginate/blob/master/app.py
 - I used the mini project lessons provided by CI to put together my functions
+- I had help from Tim Nelson (CI Tutor) to complete my JQuery for my image carousel
 
 #Acknowledgments
-- I would like to thank my mentor, Anthony Ngene who as always has been amazing. I was really struggling with
+- I would like to thank my mentor, Anthony Ngene. I was really struggling with
 a couple of functions and he kindly gave me alot of his time to show me what to do and then talked me through each
 line of code so I understood it and knew what to do for next time. He was reassuring, non-judgemental and I really
 don't think I would have got there without his help.
