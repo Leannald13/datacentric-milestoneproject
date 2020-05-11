@@ -174,6 +174,8 @@ To deploy this project to Heroku required the following steps:
     $ heroku git:remote -a <tvboxset-reviews>
     $ git push heroku master
 
+6. https://tvboxset-reviews.herokuapp.com/ 
+
 
 #Credits
 - All Image links taken from Google Searches 
