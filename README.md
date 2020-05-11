@@ -3,16 +3,15 @@
 This TV Boxset Review site is an interactive webpage designed to allow users to share and review their favourite tv boxsets.
 The webpage allows the user to create, read, update and delete boxsets(CRUD).
 My inspiration for this project came from the current Pandemic and the country being on lockdown. Friends and family would gather together
-for video calls and talk about what they were watching on TV and the likes of Netflix and Amazon Prime were releasing more boxsets due to people being restricted
-to the indoors. Upon my research I found websites that reviewed movies, and movies and boxsets, however there did not appear to be many websites that solely
-focused on TV boxsets. I chose this idea because I thought it would be extremely suitable given pandemic and allow people to share and review what they are watching.
+for video calls and talk about what they were watching on TV and the likes of Netflix and Amazon Prime were releasing more boxsets due to people being isolated indoors. I did some research and I found websites that reviewed movies, and movies and boxsets, 
+however there did not appear to be many websites that solely focused on TV boxsets. My aim was to create an interactive website which would allow people to share and review what they are watching.
 
 # UX:
 ## User Stories
 ### As a user of this platform I will be able to:
  - View all boxsets listed on the website in ascending order.
  - I will be able to search the title of a boxset and locate that boxset if it is already on the webpage.
- - I will be able to add a boxset and upload an image of this boxset.
+ - I will be able to add a boxset and upload an image link of this boxset.
  - I will be able to add a rating and review of a boxset which will then be displayed on the boxset page.
  - I will be able to edit an existing boxset and update it.
  - I will be able to delete a boxset.
@@ -34,16 +33,16 @@ clearly labelled buttons, search field at the top of the page.
 - I provided bite size information and ensured not to overload the user with information.
 - I have attempted to create a simple design which does not force the user to "go looking" for what they want.
 - I have used colours which provide comfortable viewing for individuals with learning disabilities such as Dyslexia. i.e minimal use of white.
-- I used styling commonly found on modern websites (see PDF above) such as border radius for buttons, box shadows with colour and borders.
+- I used styling commonly found on modern websites (see link above) such as border radius for buttons, box shadows with colour and borders.
 
 ## Colours
-- Due to using alot of images which provide alot of colour, I chose a simple background colour which would not clash with the colours of the images.
+- Due to using a large number of images which provide colour, I chose a simple background colour which would not clash with the colour of the images.
 - As someone who is Dyslexic, the use of white is extremely challenging to read from due to being sensitive to brightness.
 White also makes words and images "swirl" making it difficult focus, I therefore chose black.
 - According to information on the web, black provides a sophisticated and powerful look and when used against colour, can look modern.
     https://www.toptal.com/designers/ux/color-in-ux
     https://uxplanet.org/how-color-can-effect-emotion-ccab0431b1d
-- I used a lighter colour inside bordered boxes to make it easier on the eye for the viewer and prevent it from being too dark.
+- I used a lighter colour inside bordered boxes to make it more visually appealing and prevent it from being too dark.
 - I looked at movie review websites such as Rotten Tomatoes, IMDb, Flixster and saw that they used simple colour backgrounds i.e. white, gray or black,
 with the use of bold colours and lots of images to create additional colour and I therefore attempted to use a similar colour scheme.
 
@@ -64,11 +63,11 @@ https://i.pinimg.com/736x/6d/66/e6/6d66e6d2e07577cacb7a3382a86b090d.jpg
 All pages contain a navigation bar at the top of the page on desktop. The navbar becomes a side-nav when the user
 uses a mobile or ipad device. This navbar allows the user to jump to the following pages:
 - Home page - this is the landing page which includes an image carousel, cards which contain ratings for selected boxsets,
-and 4 boxset cards of boxsets which have just released a new season. The items on the home page are there to tell the user what the website is about,
+and 3 boxset cards of boxsets which have just released a new season. The items on the home page are there to tell the user what the website is about,
 and to create something that is simple but visually appealing.
 - All Boxsets - paginates pages that lists all the boxsets on the website in ascending order. This page also contains a 'search'
 function which allows the user to search the title of any boxset, and their search is filtered. The page is displayed with 9 boxsets per page, in a row of 3. Each
-boxset is presented as a simple card providing the user with a bitesize of information and a button leading them to a page with full details of that boxset.
+boxset is presented as a simple card providing the user with a bitesize of information and a button leading them to a page with full details of the chosen boxset.
 - Add Boxset - this page allows the user to add a boxset as well as have the ability to upload a link for an image.
 
 ## Other pages
@@ -78,8 +77,8 @@ The view page allows the user to use the following functions:
     - Edit boxset - once updated takes the user back to the view page
     - Delete boxset - once deleted the page redirects to 'All Boxsets'
     - Add Review - Once a review is added it redirects the user to the view page.
-- Search page - this page is linked to the search function. The user can search for a boxset title on 'All Boxsets' and their results
-are listed in the search page.
+    - Search page - this page is linked to the search function. The user can search for a boxset title on 'All Boxsets' and their results
+      are listed in the search page.
 
 ## Features left to implement
     - I would like to add a login/register function to allow the user to create a username which can then
@@ -149,7 +148,7 @@ CSS - https://jigsaw.w3.org/css-validator/
 I ran my style.css through the validator and I recieved no errors.
 
 Python - http://pep8online.com/ 
-I ran my app.py through the validator and I received 3 errors:
+I ran my app.py through the validator and I received 3 different errors:
 - Lines were too long
 - White space  
 - Additional line space
