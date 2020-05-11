@@ -53,7 +53,7 @@ def all_boxsets(offset=0, per_page=9):
                             num_pages=num_pages)
 
 
-@app.route('/insert_boxset', methods=['GET'])
+@app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
     addboxset = mongo.db.addboxset
     boxset = {
