@@ -1,4 +1,3 @@
-
 import os
 import flask.config
 from flask import Flask, render_template, redirect, request, url_for, session
@@ -16,41 +15,43 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
-
 mongo = PyMongo(app)
-"""routes"""
+
+
 @app.route('/')
 def home_page():
     return render_template("home.html", addboxset=mongo.db.addboxset.find())
+
 
 @app.route('/add_boxset')
 def add_boxset():
     return render_template("addseries.html",
                            addboxset=mongo.db.addboxset.find())
 
+
 @app.route('/add_review/<boxset_id>')
 def add_review(boxset_id):
-    return render_template("addseriesreview.html",
-                           userreviews=mongo.db.userreviews.find(),
-                           boxset_id=boxset_id)
+    return render_template("addseriesreview.html", boxset_id=boxset_id)
 
-"""pagination"""
 
 @app.route('/all_boxsets')
 def all_boxsets(offset=0, per_page=9):
     page, per_page, offset = get_page_args(page_parameter='page')
     total = mongo.db.addboxset.count()
-    allboxsets = mongo.db.addboxset.find().sort('boxset_title',
-                                                 pymongo.ASCENDING)
+    allboxsets = mongo.db.addboxset.find().sort(
+        'boxset_title', pymongo.ASCENDING)
     pagination = Pagination(offset=offset, page=page, per_page=per_page,
                             total=total, css_framework='materialize')
     boxsets_per_page = 9
     num_pages = boxsets_per_page
-    return render_template('allseries.html', addboxset=mongo.db.addboxset.find().skip(offset).limit(9).sort('boxset_title', pymongo.ASCENDING),
-                            page=page, per_page=per_page,
-                            pagination=pagination, allboxsets=allboxsets,
-                            boxsets_per_page=boxsets_per_page,
-                            num_pages=num_pages)
+    return render_template(
+        'allseries.html',
+        addboxset=mongo.db.addboxset.find().skip(offset).limit(9).sort(
+            'boxset_title', pymongo.ASCENDING),
+        page=page, per_page=per_page,
+        pagination=pagination, allboxsets=allboxsets,
+        boxsets_per_page=boxsets_per_page,
+        num_pages=num_pages)
 
 
 @app.route('/insert_boxset', methods=['POST'])
@@ -78,6 +79,7 @@ def insert_review(boxset_id):
     }
     userreviews.insert_one(review)
     return redirect(url_for('view_boxset', cards_id=boxset_id))
+
 
 @app.route('/edit_boxset/<boxset_id>')
 def edit_boxset(boxset_id):
@@ -116,16 +118,14 @@ def view_boxset(cards_id):
     return render_template('view.html', cards=cards, reviews=reviews)
 
 
-""" search function for search input on allseries.html"""
 @app.route('/search', methods=['GET'])
 def search():
     search_bar = request.args.get('search_bar')
     print(search_bar)
-    addboxset = list(mongo.db.addboxset.find({"boxset_title":
-                                            {"$regex": f'(?i).*{search_bar}.*'}}))
+    addboxset = list(mongo.db.addboxset.find(
+        {"boxset_title": {"$regex": f'(?i).*{search_bar}.*'}}))
     print(addboxset)
     return render_template('search.html', results=addboxset)
-
 
 
 if __name__ == "__main__":

@@ -2,8 +2,6 @@
 {% extends 'base.html' %}   
 {% block content %}
 
-
-{% for review in userreviews %} 
 <!--user can add a review from view.html add review button. Review is inserted into view.html.-->
 
 <div class="addreviewbackground">
@@ -13,15 +11,15 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix addreviewicon">star</i>
-                <textarea style="color:#fff;" name="review_rating" id="review_rating" class="materialize-textarea" value="{{review.review_rating}}" required></textarea>
-                <label for="icon_telephone" id="addrating">How would you rate it?</label>
+                <textarea style="color:#fff;" name="review_rating" id="review_rating" class="materialize-textarea" required></textarea>
+                <label id="addrating">How would you rate it?</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix addreviewicon">rate_review</i>
-                <textarea style="color:#fff;" name="review_message" id="review.review_message" class="materialize-textarea" value= "{{review.review_message}}" required></textarea>
-                <label for="icon_telephone" id="addreview">Tell us more about it....</label>
+                <textarea style="color:#fff;" name="review_message" id="review_message" class="materialize-textarea" required></textarea>
+                <label id="addreview">Tell us more about it....</label>
             </div>
         </div>
         <div class="row">
@@ -31,7 +29,5 @@
 </div>
 </div>
 
-
-{%endfor%}
 
 {% endblock %}

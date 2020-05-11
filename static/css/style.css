@@ -2,6 +2,7 @@
 
 .nav-wrapper {
     background-color: #FFDC40;
+    
 }
 
 .panel {
@@ -46,6 +47,7 @@
     font-family: 'Righteous', cursive;
     font-size: 50px;
 }
+
 
 .socialmediabackground {
     background-color: #FFDC40;
@@ -187,15 +189,19 @@
     border-radius: 5px;
 }
 
-/* home.html boxset cards */
+/* home.html boxset cards*/
 
 .largebox1 {
+    box-sizing: border-box;
     width: 100%;
-    height: 600px;
+    height: 900px;
     background-color: black;
-    padding-left: 50px;
-}
+    padding-left: 150px;
+    }
 
+
+
+@media (min-width: 768px) {
 .miniboxrating {
     color: white;
     text-align: center;
@@ -203,11 +209,13 @@
     font-family: 'Barlow', sans-serif;
 }
 
+
 .material-icons {
     color: black;
     padding-right: 10px;
     margin-top: 5px;
 }
+
 
 .miniboxtitle {
     color: white;
@@ -216,11 +224,13 @@
     font-family: 'Barlow', sans-serif;  
 }
 
+
 .miniboxparagraph {
     color: white;
     font-size: 18px;
     font-family: 'Barlow', sans-serif;
 }
+
 
 .miniboximage {
     width: 260px;
@@ -231,8 +241,8 @@
 }
 
 .minibox {  
-    margin-top: 60px;
-    margin-right: 50px;
+    margin-top: 30px;
+    margin-right: 100px;
     background-color: #1a1110;
     width: 270px !important;
     height: 420px;
@@ -344,7 +354,7 @@
 
 .viewseriesbackground {
     width: 100%;
-    height: 1500px;
+    height: 100%;
     background-color: black;
     padding-top: 110px;
     padding-bottom: 60px;
@@ -353,13 +363,13 @@
 
 .minibox3 {
     width: 90%;
-    height: 1350px !important;
+    height: inherit;
     background-color: #1a1110;
     border: 6px solid #f62681 !important;
     box-shadow: 12px 12px 12px #f62681 !important;
     margin-left: 50px;
     padding-top: 40px;
-    margin-bottom: 100px;
+    padding-bottom: 130px;
     }
 
 .viewtextheading {
@@ -464,7 +474,6 @@
     border-color: #f62681;
     border-style: solid;
     margin-top: 100px;
-    
     }
 
 .allseriesimage {
@@ -498,8 +507,7 @@
      background-color: #FFDC40;
      font-size: 20px;
      font-family: 'Barlow', sans-serif;
-     margin-left: 20px;
-     
+ 
 }
 
 .search_bar {
@@ -510,12 +518,14 @@
     height: 30px;
     width: 100px;
     margin-bottom: 10px;
-    margin-left: 20px;
     font-family: 'Barlow', sans-serif;
+    
 }
 
 .searchbarbackground {
     background-color: #FFDC40;
+    width: 100% !important;
+    padding-left: 20px;
 }
 
 
@@ -538,8 +548,15 @@
 
 .pagination {
     text-align: center;
+    float: right;
     
-  
+}
+
+::placeholder { 
+  color: black;
+  padding: 0;
+  margin: 0;
+ 
 }
 
 /* editseries.html */
