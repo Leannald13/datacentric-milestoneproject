@@ -26,9 +26,7 @@ To assist with the design of the website I used grids, nav, carousel and cards f
 was to have a colourful and bold website that would be pleasing to user eye. I attempted to keep the design simple and not
 overcrowd the page with too much information. My aim was to create a fun and casual looking website whilst looking clean and spacious.
 
-I used resources available to me on Slack by the tutors and used the following document as guide:
-file:///C:/Users/Administrator/Downloads/Milestone%201%20part%202.pdf
-
+I used resources available to me on Slack by the tutors and used the following document a guide.
 - I maintained website conventions to allow a user to find what they want easily eg. navbar at the top, 
 clearly labelled buttons, search field at the top of the page.
 - I used subtle but effective user actions for example hover effects for buttons and navbar.
@@ -85,7 +83,16 @@ are listed in the search page.
 ### Technologies used
 
 ## Front End
-- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [HTML](https://en.wikipedia.org/wiki/HTML) -  Used as the base for project code.
+- [CSS](https://www.w3schools.com/css/) - Used as the base for cascading styles.
+- [JQuery](https://jquery.com/) - Used for initialising side nav and image carousel and to set timing of the image carousel
+- [Materialize](https://materializecss.com/) - Used for the design framework.
 
+## Back End
+- [Flask 1.0.2](https://flask.palletsprojects.com/en/1.1.x/quickstart/) - Used as templating language to display data in HTML templates.
+- [Python 3](https://www.python.org/) - Used as the programming language at the back-end
+- [MongoDB Atlas](https://www.mongodb.com/) - Used as the database to manage the data for this website. 
+- [Jinja 2.10](https://en.wikipedia.org/wiki/Jinja_(template_engine)) - Used for displaying elements from back-end to front-end.
+- [Heroku](https://www.heroku.com/) - Used for hosting the deployed website.
 
 
