@@ -18,8 +18,10 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
-@app.route('/')
-def home_page():
+#----------Routes--------------------
+
+@app.route('/') 
+def home_page():     
     return render_template("home.html", addboxset=mongo.db.addboxset.find())
 
 
@@ -33,6 +35,7 @@ def add_boxset():
 def add_review(boxset_id):
     return render_template("addseriesreview.html", boxset_id=boxset_id)
 
+#----------Pagination and All boxsets--------------------
 
 @app.route('/all_boxsets')
 def all_boxsets(offset=0, per_page=9):
@@ -53,6 +56,7 @@ def all_boxsets(offset=0, per_page=9):
         boxsets_per_page=boxsets_per_page,
         num_pages=num_pages)
 
+#----------Add boxset and Add review functions--------------------
 
 @app.route('/insert_boxset', methods=['POST'])
 def insert_boxset():
@@ -80,18 +84,21 @@ def insert_review(boxset_id):
     userreviews.insert_one(review)
     return redirect(url_for('view_boxset', cards_id=boxset_id))
 
+#----------Edit Boxset--------------------
 
 @app.route('/edit_boxset/<boxset_id>')
 def edit_boxset(boxset_id):
     boxset = mongo.db.addboxset.find_one({"_id": ObjectId(boxset_id)})
     return render_template("editseries.html", boxset=boxset)
 
+#----------Delete Boxset--------------------
 
 @app.route('/delete_boxset/<cards_id>')
 def delete_boxset(cards_id):
     cards = mongo.db.addboxset.remove({'_id': ObjectId(cards_id)})
     return redirect(url_for('all_boxsets'))
 
+#----------Update boxset after editing--------------------
 
 @app.route('/update_boxset/<boxset_id>', methods=['POST'])
 def update_boxset(boxset_id):
@@ -108,6 +115,7 @@ def update_boxset(boxset_id):
     return redirect(url_for('view_boxset', cards_id=boxset_id))
     return render_template('allseries.html', boxset=boxset)
 
+#----------View boxsets on individual pages--------------------
 
 @app.route('/view_boxset/<cards_id>', methods=["GET", "POST"])
 def view_boxset(cards_id):
@@ -117,6 +125,7 @@ def view_boxset(cards_id):
     print(reviews)
     return render_template('view.html', cards=cards, reviews=reviews)
 
+#----------Search function to allow user to search title--------------------
 
 @app.route('/search', methods=['GET'])
 def search():

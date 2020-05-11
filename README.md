@@ -26,7 +26,8 @@ To assist with the design of the website I used grids, nav, carousel and cards f
 was to have a colourful and bold website that would be pleasing to user eye. I attempted to keep the design simple and not
 overcrowd the page with too much information. My aim was to create a fun and casual looking website whilst looking clean and spacious.
 
-I used resources available to me on Slack by the tutors and used the following document a guide.
+I used resources available to me on Slack by the tutors and used the following document a guide:
+https://code-institute-room.slack.com/archives/C7J2ZAVHB/p1556827813043100 
 - I maintained website conventions to allow a user to find what they want easily eg. navbar at the top, 
 clearly labelled buttons, search field at the top of the page.
 - I used subtle but effective user actions for example hover effects for buttons and navbar.
@@ -46,6 +47,10 @@ White also makes words and images "swirl" making it difficult focus, I therefore
 - I looked at movie review websites such as Rotten Tomatoes, IMDb, Flixster and saw that they used simple colour backgrounds i.e. white, gray or black,
 with the use of bold colours and lots of images to create additional colour and I therefore attempted to use a similar colour scheme.
 
+### Colour Palettes I took inspiration from:
+http://lowdi.com/
+https://i.pinimg.com/736x/6d/66/e6/6d66e6d2e07577cacb7a3382a86b090d.jpg
+
 ## Typography
 - I chose Barlow for my main font as I felt this was simple and easy to read and display.
 - For my main title and the navbar I used Righteous as I thought this was a fun and relaxed looking font but still easy to read.
@@ -54,7 +59,7 @@ with the use of bold colours and lots of images to create additional colour and 
 - I made use of the icons from the Materialize icons library to help create a fun feel when the user visits the website.
 
 
-### Features
+# Features
 ## Base   
 All pages contain a navigation bar at the top of the page on desktop. The navbar becomes a side-nav when the user
 uses a mobile or ipad device. This navbar allows the user to jump to the following pages:
@@ -81,7 +86,6 @@ are listed in the search page.
     be displayed when they write a review.
 
 ### Technologies used
-
 ## Front End
 - [HTML](https://en.wikipedia.org/wiki/HTML) -  Used as the base for project code.
 - [CSS](https://www.w3schools.com/css/) - Used as the base for cascading styles.
@@ -98,7 +102,6 @@ are listed in the search page.
 # Testing
 
 ## Desktop 
-
 ### Functions and outcomes:
 Navbar:
 - Click navbar 'All Boxsets' > directs user to 'All Boxsets' > Outcome: Pass
@@ -118,7 +121,6 @@ Search Bar:
 - Type title or letters of a boxset into search bar > click submit > directs user to 'Search' template listing results > Outcome: Pass
 
 ## Mobile and Ipad 
-
 ### Functions and outcomes:
 Navbar:
 - Click navbar 'All Boxsets' > directs user to 'All Boxsets' > Outcome: Pass
@@ -138,7 +140,6 @@ Search Bar:
 - Type title or letters of a boxset into search bar > click submit > directs user to 'Search' template listing results > Outcome: Pass
 
 ## Code Validators
-
 HTML - https://validator.w3.org/ 
 I ran each HTML template through the validators. Each page presented with a number of errors that related to
 the Jinja templating. I discussed this with the Tutors on the support tab who informed me that this is to be expected
@@ -155,15 +156,45 @@ I ran my app.py through the validator and I received 3 errors:
 I fixed these errors and ran my code again which recieved no errors.
 
 ## Testing devices
-
 - Desktop - passed
 - Mobile device - passed
 - Ipad - passed
 
 ## Testing Browsers
-
 - Chrome - passed
 - Internet Explorer - passed
+
+#Deployment to Heroku
+To deploy this project to Heroku required the following steps:
+1. Register for Heroku and once signed in click the "New" button on the dashboard to create a new app.
+2. In Heroku Name the app and specify the region.
+3. Create a requirement.txt file to allow Heroku to install the required dependencies to run the app. The CLI text to input is as follows pip3 freeze --local > requirements.txt.
+4. Create a Procfile to inform Heroku what type of app is being deployed echo web: python run.py > Procfile.
+5. In the CLI of you IDE input the following:
+    $ heroku login
+    $ heroku git:remote -a <tvboxset-reviews>
+    $ git push heroku master
+
+
+#Credits
+- All Image links taken from Google Searches 
+- Information for each boxset was taken from a number of different websites including; IMDb, Rotten Tomatoes and Wikipedia
+- I used Netflix, Amazon and NOWtv to choose popular boxsets.
+- I reviewed a number of peer code that I used to gather ideas and help me:
+    https://github.com/Bumper0417/Milestone-project-3-Python 
+    https://github.com/DarrenCoppinger/milestone-project-3
+    https://github.com/rodrigoneumann/third-milestone-project
+- I used Slack (data-centric dev channel) to assist with my pagination
+- I used the following code example to assist with pagination: https://github.com/DarilliGames/flaskpaginate/blob/master/app.py
+- I used the mini project lessons provided by CI to put together my functions
+
+#Acknowledgments
+- I would like to thank my mentor, Anthony Ngene who as always has been amazing. I was really struggling with
+a couple of functions and he kindly gave me alot of his time to show me what to do and then talked me through each
+line of code so I understood it and knew what to do for next time. He was reassuring, non-judgemental and I really
+don't think I would have got there without his help.
+
+
 
 
 
