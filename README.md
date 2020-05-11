@@ -95,4 +95,44 @@ are listed in the search page.
 - [Jinja 2.10](https://en.wikipedia.org/wiki/Jinja_(template_engine)) - Used for displaying elements from back-end to front-end.
 - [Heroku](https://www.heroku.com/) - Used for hosting the deployed website.
 
+### Testing
 
+## Desktop 
+
+# Functions and outcomes:
+Navbar
+- Click navbar 'All Boxsets' > directs user to 'All Boxsets' > Outcome: Pass
+- Click navbar 'Add Boxset' > directs user to 'Add Boxset' > Outcome: Pass
+- Click navbar 'Home' > directs user to Home > Outcome: Pass 
+
+buttons
+- Click 'Read more' button on home page > directs user to view page > Outcome: Pass
+- Click ' Read more' button on 'All Boxsets' > directs user to view page > Outcome: Pass
+- Click 'Add Review' button on 'View' > directs user to 'Add Review' page > Outcome: Pass
+- Click 'Add Review' button on 'Add Review' page > redirects user to 'View' > Outcome: Pass
+- Click 'Edit Boxset' button on 'View' > directs user to 'Edit Boxset' page > Outcome: Pass
+- Click 'Update Boxset' button on 'Edit Review' > directs user to 'View' page > Outcome: Pass
+- Click 'Delete Boxset' button on 'View' page > deletes boxset and redirects user to 'All Boxsets' > Outcome: Pass
+
+Search Bar 
+- Type title or letters of a boxset into search bar > click submit > directs user to 'Search' template listing results > Outcome: Pass
+
+## Mobile and Ipad 
+
+# Functions and outcomes:
+Navbar
+- Click navbar 'All Boxsets' > directs user to 'All Boxsets' > Outcome: Pass
+- Click navbar 'Add Boxset' > directs user to 'Add Boxset' > Outcome: Pass
+- Click navbar 'Home' > directs user to Home > Outcome: Pass 
+
+buttons
+- Click 'Read more' button on home page > directs user to view page > Outcome: Pass
+- Click ' Read more' button on 'All Boxsets' > directs user to view page > Outcome: Pass
+- Click 'Add Review' button on 'View' > directs user to 'Add Review' page > Outcome: Pass
+- Click 'Add Review' button on 'Add Review' page > redirects user to 'View' > Outcome: Pass
+- Click 'Edit Boxset' button on 'View' > directs user to 'Edit Boxset' page > Outcome: Pass
+- Click 'Update Boxset' button on 'Edit Review' > directs user to 'View' page > Outcome: Pass
+- Click 'Delete Boxset' button on 'View' page > deletes boxset and redirects user to 'All Boxsets' > Outcome: Pass
+
+Search Bar 
+- Type title or letters of a boxset into search bar > click submit > directs user to 'Search' template listing results > Outcome: Pass
