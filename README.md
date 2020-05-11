@@ -2,6 +2,10 @@
 
 This TV Boxset Review site is an interactive webpage designed to allow users to share and review their favourite tv boxsets.
 The webpage allows the user to create, read, update and delete boxsets(CRUD).
+My inspiration for this project came from the current Pandemic and the country being on lockdown. Friends and family would gather together
+for video calls and talk about what they were watching on TV and the likes of Netflix and Amazon Prime were releasing more boxsets due to people being restricted
+to the indoors. Upon my research I found websites that reviewed movies, and movies and boxsets, however there did not appear to be many websites that solely
+focused on TV boxsets. I chose this idea because I thought it would be extremely suitable given pandemic and allow people to share and review what they are watching.
 
 # UX:
 ## User Stories
@@ -20,12 +24,12 @@ Located in my github repo for desktop and mobile
 ## Design
 To assist with the design of the website I used grids, nav, carousel and cards from Materialize. The aim of this website
 was to have a colourful and bold website that would be pleasing to user eye. I attempted to keep the design simple and not
-overcrowd the page with too much information. 
+overcrowd the page with too much information. My aim was to create a fun and casual looking website whilst looking clean and spacious.
 
 I used resources available to me on Slack by the tutors and used the following document as guide:
 file:///C:/Users/Administrator/Downloads/Milestone%201%20part%202.pdf
 
-- I maintained website conventions to allow a user to find what they want easily eg. nav bar at the top, 
+- I maintained website conventions to allow a user to find what they want easily eg. navbar at the top, 
 clearly labelled buttons, search field at the top of the page.
 - I used subtle but effective user actions for example hover effects for buttons and navbar.
 - I provided bite size information and ensured not to overload the user with information.
@@ -34,7 +38,7 @@ clearly labelled buttons, search field at the top of the page.
 - I used styling commonly found on modern websites (see PDF above) such as border radius for buttons, box shadows with colour and borders.
 
 ## Colours
-- Due to using alot of images which are extremely colourful, I chose a simple background colour which would not clash with the colours of the images.
+- Due to using alot of images which provide alot of colour, I chose a simple background colour which would not clash with the colours of the images.
 - As someone who is Dyslexic, the use of white is extremely challenging to read from due to being sensitive to brightness.
 White also makes words and images "swirl" making it difficult focus, I therefore chose black.
 - According to information on the web, black provides a sophisticated and powerful look and when used against colour, can look modern.
@@ -43,3 +47,45 @@ White also makes words and images "swirl" making it difficult focus, I therefore
 - I used a lighter colour inside bordered boxes to make it easier on the eye for the viewer and prevent it from being too dark.
 - I looked at movie review websites such as Rotten Tomatoes, IMDb, Flixster and saw that they used simple colour backgrounds i.e. white, gray or black,
 with the use of bold colours and lots of images to create additional colour and I therefore attempted to use a similar colour scheme.
+
+## Typography
+- I chose Barlow for my main font as I felt this was simple and easy to read and display.
+- For my main title and the navbar I used Righteous as I thought this was a fun and relaxed looking font but still easy to read.
+
+## Icons
+- I made use of the icons from the Materialize icons library to help create a fun feel when the user visits the website.
+
+
+### Features
+## Base   
+All pages contain a navigation bar at the top of the page on desktop. The navbar becomes a side-nav when the user
+uses a mobile or ipad device. This navbar allows the user to jump to the following pages:
+- Home page - this is the landing page which includes an image carousel, cards which contain ratings for selected boxsets,
+and 4 boxset cards of boxsets which have just released a new season. The items on the home page are there to tell the user what the website is about,
+and to create something that is simple but visually appealing.
+- All Boxsets - paginates pages that lists all the boxsets on the website in ascending order. This page also contains a 'search'
+function which allows the user to search the title of any boxset, and their search is filtered. The page is displayed with 9 boxsets per page, in a row of 3. Each
+boxset is presented as a simple card providing the user with a bitesize of information and a button leading them to a page with full details of that boxset.
+- Add Boxset - this page allows the user to add a boxset as well as have the ability to upload a link for an image.
+
+## Other pages
+- View page - the user can view each boxset on an individual page which will provide more information about that boxset as well as
+user ratings and reviews. This page is reached by pressing the 'read more' button on the 'All Boxsets' page. 
+The view page allows the user to use the following functions:
+    - Edit boxset - once updated takes the user back to the view page
+    - Delete boxset - once deleted the page redirects to 'All Boxsets'
+    - Add Review - Once a review is added it redirects the user to the view page.
+- Search page - this page is linked to the search function. The user can search for a boxset title on 'All Boxsets' and their results
+are listed in the search page.
+
+## Features left to implement
+    - I would like to add a login/register function to allow the user to create a username which can then
+    be displayed when they write a review.
+
+### Technologies used
+
+## Front End
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+
+
+
